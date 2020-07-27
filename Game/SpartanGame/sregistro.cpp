@@ -8,7 +8,7 @@
 void sregistro::sescribir(string a)
 {
   ofstream archivo;
-   archivo.open("../Videojuego/Solitarioregistro.txt", ios::app);
+   archivo.open("../Documentos/Solitarioregistro.txt", ios::app);
    if (archivo.fail()){
        qDebug()<< "No se pudo abrir el archivo";
        exit(1);
