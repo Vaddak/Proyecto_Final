@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Imagenes/aceptar.jpg</file>
+        <file>Imagenes/atras.png</file>
+        <file>Imagenes/barra.png</file>
+        <file>Imagenes/boton.jpg</file>
+        <file>Imagenes/cargar.jpg</file>
+        <file>Imagenes/haloc.png</file>
+        <file>Imagenes/instructivo.png</file>
+        <file>Imagenes/jugar.png</file>
+        <file>Imagenes/logo.jpg</file>
+        <file>Imagenes/main.jpg</file>
+        <file>Imagenes/multijugador.png</file>
+        <file>Imagenes/nickname.jpg</file>
+        <file>Imagenes/nicknames.png</file>
+        <file>Imagenes/registro.png</file>
+        <file>Imagenes/salir.png</file>
+        <file>Imagenes/scargar.png</file>
+        <file>Imagenes/solitario.png</file>
+    </qresource>
+</RCC>
