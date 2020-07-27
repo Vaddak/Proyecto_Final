@@ -21,8 +21,10 @@
 #include <QFont>
 #include <QIcon>
 #include "instrucciones.h"
+#include <QMediaPlayer>
 #include <QtMultimedia/QMediaPlayer>
 #include <string.h>
+#include "spartan.h"
 using namespace std;
 
 QT_BEGIN_NAMESPACE
@@ -53,7 +55,10 @@ private: //Creo los objetos
   Ui::MainWindow *ui;
   //QGraphicsScene *scene = new QGraphicsScene(this); //creo la escena
   QGraphicsScene *scene;
+  Spartan *player1;
   QMediaPlayer *sound = new QMediaPlayer();
+
+
  // QGraphicsView *view;
  // QGraphicsView *view = new QGraphicsView(this);
 

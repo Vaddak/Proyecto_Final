@@ -12,6 +12,7 @@ class mregistro : public QDialog
   Q_OBJECT
 
 public:
+  void mescribir(string,string);
   explicit mregistro(QWidget *parent = nullptr);
   ~mregistro();
 

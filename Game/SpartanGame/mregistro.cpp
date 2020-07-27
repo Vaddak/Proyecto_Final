@@ -3,6 +3,20 @@
 #include "multiplayer.h"
 #include "instrucciones.h"
 
+void mregistro::mescribir(string a, string b) //funcion que guarda los nombres de los jugadores en multiplayer
+{
+
+    ofstream archivo;
+     archivo.open("../Documentos/Multiplayerregistro.txt", ios::app);
+     if (archivo.fail()){
+         qDebug()<< "No se pudo abrir el archivo";
+         exit(1);
+     }
+
+     archivo <<a<<","<<b<< "\n";
+     archivo.close();
+}
+
 mregistro::mregistro(QWidget *parent) :
   QDialog(parent),
   ui(new Ui::mregistro)
@@ -20,6 +34,13 @@ mregistro::~mregistro()
 
 void mregistro::on_aceptar_clicked()
 {
+  QString s = ui->player1->text();
+  QString v = ui->player2->text();
+  string a;
+  string b;
+  a = s.toUtf8().constData();
+  b = v.toUtf8().constData();
+  mescribir(a,b);
   this->close();
   instrucciones instrucciones;
   instrucciones.setModal(true);

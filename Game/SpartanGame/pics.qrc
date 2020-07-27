@@ -17,5 +17,7 @@
         <file>Imagenes/salir.png</file>
         <file>Imagenes/scargar.png</file>
         <file>Imagenes/solitario.png</file>
+        <file>Imagenes/p1.jpg</file>
+        <file>Imagenes/p2.jpg</file>
     </qresource>
 </RCC>

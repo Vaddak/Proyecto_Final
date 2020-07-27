@@ -115,11 +115,17 @@
      <height>100</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Halo</family>
+     <pointsize>72</pointsize>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/Imagenes/barra.png);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="player2">
    <property name="geometry">
     <rect>
      <x>610</x>

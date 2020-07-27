@@ -25,7 +25,9 @@ SOURCES += \
     multiplayer.cpp \
     scargar.cpp \
     solitario.cpp \
-    sregistro.cpp
+    spartan.cpp \
+    sregistro.cpp \
+    uno.cpp
 
 HEADERS += \
     instrucciones.h \
@@ -34,7 +36,9 @@ HEADERS += \
     multiplayer.h \
     scargar.h \
     solitario.h \
-    sregistro.h
+    spartan.h \
+    sregistro.h \
+    uno.h
 
 FORMS += \
     instrucciones.ui \
@@ -43,7 +47,8 @@ FORMS += \
     multiplayer.ui \
     scargar.ui \
     solitario.ui \
-    sregistro.ui
+    sregistro.ui \
+    uno.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
