@@ -16,7 +16,8 @@ public:
   ~instrucciones();
 
 private slots:
-  void on_salir_clicked();
+
+  void on_aceptar_clicked();
 
 private:
   Ui::instrucciones *ui;

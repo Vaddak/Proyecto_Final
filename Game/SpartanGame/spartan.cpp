@@ -1,22 +1,50 @@
 #include "spartan.h"
 
-Spartan::Spartan(QObject *parent) : QObject(parent)
+/*Spartan::Spartan(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent)
 {
 
     timer = new QTimer();
     filas = 0;
     columnas = 0;
     setPos(posx,posy);
-    pixmap = new QPixmap(":/Imagenes/p1.jpg"); //Cargo la imagen del pacman
-
-
-
-    //dimensiones de c/U de las imagenes
-    ancho = 56;
-    alto  = 56;
+   pixmap = new QPixmap(":/Imagenes/spartan1.png"); //Cargo la imagen del spartan
+    //dimensiones de c/U de las imagenes del sprite
+    ancho = 288;
+    alto  = 288;
     timer->start(80);// modifica la velocidad en que itera entre las imagenes
     connect(timer,&QTimer::timeout,this,&Spartan::Actualizacion);
-    setPos(350,350); //donde aparece el pacman
+    setPos(350,700); //donde aparece el personaje
+}  */
+
+void Spartan::spartan1(QGraphicsItem *parent)
+{
+  timer = new QTimer();
+  filas = 0;
+  columnas = 0;
+  setPos(posx,posy);
+ pixmap = new QPixmap(":/Imagenes/spartan1.png"); //Cargo la imagen del spartan
+  //dimensiones de c/U de las imagenes del sprite
+  ancho = 288;
+  alto  = 288;
+  timer->start(70);// modifica la velocidad en que itera entre las imagenes
+  connect(timer,&QTimer::timeout,this,&Spartan::Actualizacion);
+  setPos(350,700); //donde aparece el personaje
+}
+
+
+void Spartan::spartan2(QGraphicsItem *parent)
+{
+  timer = new QTimer();
+  filas = 0;
+  columnas = 0;
+  setPos(posx,posy);
+ pixmap = new QPixmap(":/Imagenes/spartan2.png"); //Cargo la imagen del spartan
+  //dimensiones de c/U de las imagenes del sprite
+  ancho = 288;
+  alto  = 288;
+  timer->start(80);// modifica la velocidad en que itera entre las imagenes
+  connect(timer,&QTimer::timeout,this,&Spartan::Actualizacion);
+  setPos(350,700); //donde aparece el personaje
 
 }
 
@@ -45,8 +73,8 @@ void Spartan::setPosy(int py)
 
 void Spartan::Actualizacion() //se desplaza en las posiciones para mostrar el movimiento de la boca del pacman
 {
-    columnas +=50;
-    if(columnas >=200)
+    columnas +=288;
+    if(columnas >=866)
     {
         columnas =0;
     }
@@ -65,15 +93,14 @@ void Spartan::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, Q
 
 
 
-
-void Spartan::up() //movimiento hacia arriba del pacman
+void Spartan::up() //salto del spartan
 {
   this->setPos(x(),y()-5);
 }
 
 
 
-void Spartan::right() //movimiento hacia izquierda del pacman
+void Spartan::right() //desplazamiento del spartan
 {
   this->setPos(x()+5,y());
 }

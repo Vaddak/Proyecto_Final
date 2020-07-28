@@ -20,7 +20,8 @@ instrucciones::~instrucciones()
   delete ui;
 }
 
-void instrucciones::on_salir_clicked()
+
+void instrucciones::on_aceptar_clicked()
 {
     this->close();
 }

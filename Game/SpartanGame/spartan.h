@@ -16,13 +16,15 @@
 #include <QPixmap>
 #include <QIcon>
 
-class Spartan:  public QObject, public QGraphicsItem
+class Spartan:  public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
     int posx, posy;
 public:
 
-    explicit Spartan(QObject *parent = nullptr);
+    //Spartan(QGraphicsItem *parent = 0);
+    void spartan1(QGraphicsItem *parent = 0);
+    void spartan2(QGraphicsItem *parent = 0);
     QTimer *timer;
     QPixmap *pixmap;
     float filas,columnas;

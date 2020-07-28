@@ -23,6 +23,7 @@ SOURCES += \
     mainwindow.cpp \
     mregistro.cpp \
     multiplayer.cpp \
+    muro.cpp \
     scargar.cpp \
     solitario.cpp \
     spartan.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     mainwindow.h \
     mregistro.h \
     multiplayer.h \
+    muro.h \
     scargar.h \
     solitario.h \
     spartan.h \

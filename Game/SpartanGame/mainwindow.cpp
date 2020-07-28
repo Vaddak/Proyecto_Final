@@ -3,6 +3,7 @@
 #include "solitario.h"
 #include "scargar.h"
 #include "multiplayer.h"
+#include "instrucciones.h"
 
 
 
@@ -23,12 +24,14 @@ MainWindow::MainWindow(QWidget *parent)
   scene->setBackgroundBrush(QBrush(QImage(":/main.jpg")));
   ui->graphicsView->setScene(scene);
   //sonido del menu
-  player1 = new Spartan(); //genera el pacman de la clase sprite
-  scene->addItem(player1); //agrega el pacman a la escena
+
 
   sound->setMedia(QUrl("qrc:/Music/theme.mp3"));
 
   sound->play();
+  instrucciones instrucciones;
+  instrucciones.setModal(true);
+  instrucciones.exec();
 
 
 
