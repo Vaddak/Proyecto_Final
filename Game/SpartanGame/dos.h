@@ -1,29 +1,28 @@
-#ifndef UNO_H
-#define UNO_H
+#ifndef DOS_H
+#define DOS_H
 #include "mainwindow.h"
 #include <QDialog>
 
 namespace Ui {
-  class uno;
+  class dos;
 }
 
-class uno : public QDialog
+class dos : public QDialog
 {
   Q_OBJECT
 
 public:
-  explicit uno(QWidget *parent = nullptr);
-  void suno(QWidget *parent = nullptr);
-  void muno(QWidget *parent = nullptr);
-  ~uno();
+  explicit dos(QWidget *parent = nullptr);
+  void mdos(QWidget *parent = nullptr);
+  void sdos(QWidget *parent = nullptr);
+  ~dos();
 
 private:
-  Ui::uno *ui;
+  Ui::dos *ui;
   QGraphicsScene *scene;
   Spartan *player1, *player2;
-
   floor *wall1, *wall2, *wall3, *wall4, *wall5, *wall6, *wall7, *wall8, *wall9;
 
 };
 
-#endif // UNO_H
+#endif // DOS_H

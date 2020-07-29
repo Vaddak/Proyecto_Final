@@ -29,7 +29,7 @@ void Spartan::spartan1(QGraphicsItem *parent)
   alto  = 288;
   timer->start(110);// modifica la velocidad en que itera entre las imagenes
   connect(timer,&QTimer::timeout,this,&Spartan::Actualizacion);
-  setPos(90,700); //donde aparece el personaje
+  setPos(80,690); //donde aparece el personaje
 }
 
 
@@ -45,7 +45,7 @@ void Spartan::spartan2(QGraphicsItem *parent)
   alto  = 288;
   timer->start(110);// modifica la velocidad en que itera entre las imagenes
   connect(timer,&QTimer::timeout,this,&Spartan::Actualizacion);
-  setPos(90,700); //donde aparece el personaje
+  setPos(90,690); //donde aparece el personaje
 
 }
 

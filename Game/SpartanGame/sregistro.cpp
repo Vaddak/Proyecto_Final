@@ -4,6 +4,8 @@
 #include "solitario.h"
 #include "ui_solitario.h"
 #include <QString>
+#include "uno.h"
+#include "ui_uno.h"
 
 void sregistro::sescribir(string a)
 {
@@ -59,8 +61,9 @@ void sregistro::on_aceptar_clicked() //ESCRIBE EL TXT CON EL NOMBRE DE CADA JUGA
   a = s.toUtf8().constData();
   sescribir(a);
   this->close();
-  instrucciones instrucciones;
-  instrucciones.setModal(true);
-  instrucciones.exec();
+  uno uno;
+  uno.setModal(true);
+  uno.suno();
+  uno.exec();
 
 }

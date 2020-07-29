@@ -1,78 +1,24 @@
-#include "uno.h"
-#include "ui_uno.h"
-#include "spartan.h"
-uno::uno(QWidget *parent) :
-  QDialog(parent),
-  ui(new Ui::uno)
+#include "dos.h"
+#include "ui_dos.h"
 
+dos::dos(QWidget *parent) :
+  QDialog(parent),
+  ui(new Ui::dos)
 {
   ui->setupUi(this);
+  scene = new QGraphicsScene(0,0,3500,1000);
+  //scene->setBackgroundBrush(QBrush(QImage(":/Imagenes/mapa2.jpg")));
+  ui->graphicsView->setScene(scene);
 
 
 }
 
 
-//------------------------------------------------------ MODO SOLITARIO --------------------------------------------------------------
-void uno::suno(QWidget *parent)
+
+// ----------------------------------------------------------- MODO MULTIJUGADOR ------------------------------------------------------
+void dos::mdos(QWidget *parent)
 {
-  scene = new QGraphicsScene(0,0,3500,1000);
-  //scene->setBackgroundBrush(QBrush(QImage(":/Imagenes/mapa1.jpg")));
-  ui->graphicsView->setScene(scene);
-
   //-------------- AGREGO PERSONAJES  ----------------------------
-
-  player1 = new Spartan(); //genera el personaje de la clase Spartan
-  player1->spartan1();
-  scene->addItem(player1); //lo agrego a la escena
-
-  //-------------- AGREGO EL SUELO AL NIVEL -----------------------
-  wall1 = new floor();
-  wall1->muro1(0,900);
-  scene->addItem(wall1);
-
-  wall2 = new floor();
-  wall2->muro1(400,900);
-  scene->addItem(wall2);
-
-  wall3 = new floor();
-  wall3->muro1(800,900);
-  scene->addItem(wall3);
-
-  wall4 = new floor();
-  wall4->muro1(1200,900);
-  scene->addItem(wall4);
-
-  wall5 = new floor();
-  wall5->muro1(1600,900);
-  scene->addItem(wall5);
-
-  wall6 = new floor();
-  wall6->muro1(2000,900);
-  scene->addItem(wall6);
-
-  wall7 = new floor();
-  wall7->muro1(2400,900);
-  scene->addItem(wall7);
-
-  wall8 = new floor();
-  wall8->muro1(2800,900);
-  scene->addItem(wall8);
-
-  wall9 = new floor();
-  wall9->muro1(3200,900);
-  scene->addItem(wall9);
-}
-
-
-//----------------------------------------------------- MODO MULTIJUGADOR
-void uno::muno(QWidget *parent)
-{
-  scene = new QGraphicsScene(0,0,3500,1000);
-  //scene->setBackgroundBrush(QBrush(QImage(":/Imagenes/mapa1.jpg")));
-  ui->graphicsView->setScene(scene);
-
-  //-------------- AGREGO PERSONAJES  ----------------------------
-
   player1 = new Spartan(); //genera el personaje de la clase Spartan
   player1->spartan1();
   scene->addItem(player1); //lo agrego a la escena
@@ -82,45 +28,94 @@ void uno::muno(QWidget *parent)
   scene->addItem(player2);
 
 
-  //-------------- AGREGO EL SUELO AL NIVEL -----------------------
+  //-------------- AGREGO EL SUELO AL NIVEL ----------------------
   wall1 = new floor();
-  wall1->muro1(0,900);
+  wall1->muro2(0,900);
   scene->addItem(wall1);
 
   wall2 = new floor();
-  wall2->muro1(400,900);
+  wall2->muro2(400,900);
   scene->addItem(wall2);
 
   wall3 = new floor();
-  wall3->muro1(800,900);
+  wall3->muro2(800,900);
   scene->addItem(wall3);
 
   wall4 = new floor();
-  wall4->muro1(1200,900);
+  wall4->muro2(1200,900);
   scene->addItem(wall4);
 
   wall5 = new floor();
-  wall5->muro1(1600,900);
+  wall5->muro2(1600,900);
   scene->addItem(wall5);
 
   wall6 = new floor();
-  wall6->muro1(2000,900);
+  wall6->muro2(2000,900);
   scene->addItem(wall6);
 
   wall7 = new floor();
-  wall7->muro1(2400,900);
+  wall7->muro2(2400,900);
   scene->addItem(wall7);
 
   wall8 = new floor();
-  wall8->muro1(2800,900);
+  wall8->muro2(2800,900);
   scene->addItem(wall8);
 
   wall9 = new floor();
-  wall9->muro1(3200,900);
+  wall9->muro2(3200,900);
   scene->addItem(wall9);
 }
 
-uno::~uno()
+
+// ----------------------------------------------------------- MODO SOLITARIO ------------------------------------------------------
+void dos::sdos(QWidget *parent)
+{
+  //-------------- AGREGO PERSONAJES  ----------------------------
+  player1 = new Spartan(); //genera el personaje de la clase Spartan
+  player1->spartan1();
+  scene->addItem(player1); //lo agrego a la escena
+
+
+  //-------------- AGREGO EL SUELO AL NIVEL -----------------------
+  wall1 = new floor();
+  wall1->muro2(0,900);
+  scene->addItem(wall1);
+
+  wall2 = new floor();
+  wall2->muro2(400,900);
+  scene->addItem(wall2);
+
+  wall3 = new floor();
+  wall3->muro2(800,900);
+  scene->addItem(wall3);
+
+  wall4 = new floor();
+  wall4->muro2(1200,900);
+  scene->addItem(wall4);
+
+  wall5 = new floor();
+  wall5->muro2(1600,900);
+  scene->addItem(wall5);
+
+  wall6 = new floor();
+  wall6->muro2(2000,900);
+  scene->addItem(wall6);
+
+  wall7 = new floor();
+  wall7->muro2(2400,900);
+  scene->addItem(wall7);
+
+  wall8 = new floor();
+  wall8->muro2(2800,900);
+  scene->addItem(wall8);
+
+  wall9 = new floor();
+  wall9->muro2(3200,900);
+  scene->addItem(wall9);
+}
+
+dos::~dos()
 {
   delete ui;
 }
+

@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    dos.cpp \
     floor.cpp \
     instrucciones.cpp \
     main.cpp \
@@ -28,9 +29,11 @@ SOURCES += \
     solitario.cpp \
     spartan.cpp \
     sregistro.cpp \
+    tres.cpp \
     uno.cpp
 
 HEADERS += \
+    dos.h \
     floor.h \
     instrucciones.h \
     mainwindow.h \
@@ -40,9 +43,11 @@ HEADERS += \
     solitario.h \
     spartan.h \
     sregistro.h \
+    tres.h \
     uno.h
 
 FORMS += \
+    dos.ui \
     instrucciones.ui \
     mainwindow.ui \
     mregistro.ui \
@@ -50,6 +55,7 @@ FORMS += \
     scargar.ui \
     solitario.ui \
     sregistro.ui \
+    tres.ui \
     uno.ui
 
 # Default rules for deployment.
