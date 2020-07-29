@@ -11,6 +11,7 @@ multiplayer::multiplayer(QWidget *parent) :
   scene = new QGraphicsScene(0,0,1800,1000);
   scene->setBackgroundBrush(QBrush(QImage(":/main.jpg")));
   ui->graphicsView->setScene(scene);
+
 }
 
 multiplayer::~multiplayer()

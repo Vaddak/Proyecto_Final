@@ -19,7 +19,9 @@ private:
   Ui::uno *ui;
   QGraphicsScene *scene;
   Spartan *player1;
-  muro *muro;
+
+  floor *wall1, *wall2, *wall3, *wall4, *wall5, *wall6, *wall7, *wall8, *wall9;
+
 };
 
 #endif // UNO_H

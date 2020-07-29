@@ -3,6 +3,7 @@
 #include "multiplayer.h"
 #include "instrucciones.h"
 #include "uno.h"
+#include "ui_uno.h"
 
 void mregistro::mescribir(string a, string b) //funcion que guarda los nombres de los jugadores en multiplayer
 {
@@ -35,6 +36,7 @@ mregistro::~mregistro()
 
 void mregistro::on_aceptar_clicked()
 {
+
   QString s = ui->player1->text();
   QString v = ui->player2->text();
   string a;
@@ -46,6 +48,7 @@ void mregistro::on_aceptar_clicked()
   uno uno;
   uno.setModal(true);
   uno.exec();
+
 }
 
 

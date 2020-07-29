@@ -23,12 +23,13 @@ void Spartan::spartan1(QGraphicsItem *parent)
   columnas = 0;
   setPos(posx,posy);
  pixmap = new QPixmap(":/Imagenes/spartan1.png"); //Cargo la imagen del spartan
+ pixmap->scaled(100,100);
   //dimensiones de c/U de las imagenes del sprite
   ancho = 288;
   alto  = 288;
-  timer->start(70);// modifica la velocidad en que itera entre las imagenes
+  timer->start(110);// modifica la velocidad en que itera entre las imagenes
   connect(timer,&QTimer::timeout,this,&Spartan::Actualizacion);
-  setPos(350,700); //donde aparece el personaje
+  setPos(90,700); //donde aparece el personaje
 }
 
 
@@ -42,9 +43,9 @@ void Spartan::spartan2(QGraphicsItem *parent)
   //dimensiones de c/U de las imagenes del sprite
   ancho = 288;
   alto  = 288;
-  timer->start(80);// modifica la velocidad en que itera entre las imagenes
+  timer->start(110);// modifica la velocidad en que itera entre las imagenes
   connect(timer,&QTimer::timeout,this,&Spartan::Actualizacion);
-  setPos(350,700); //donde aparece el personaje
+  setPos(90,700); //donde aparece el personaje
 
 }
 

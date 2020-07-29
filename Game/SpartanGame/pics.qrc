@@ -22,5 +22,9 @@
         <file>Imagenes/spartan1.png</file>
         <file>Imagenes/p1.jpg</file>
         <file>Imagenes/spartan2.png</file>
+        <file>Imagenes/wall1.jpg</file>
+        <file>Imagenes/wall2.jpg</file>
+        <file>Imagenes/wall3.jpg</file>
+        <file>Imagenes/wall4.jpg</file>
     </qresource>
 </RCC>

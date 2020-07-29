@@ -28,10 +28,12 @@ public:
         uno->resize(3500, 1000);
         graphicsView = new QGraphicsView(uno);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(0, 0, 3500, 800));
+        graphicsView->setGeometry(QRect(0, 0, 3500, 1000));
         graphicsView->setStyleSheet(QString::fromUtf8("background-image: url(:/Imagenes/mapa1.jpg);"));
         graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        graphicsView->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
+        graphicsView->setOptimizationFlags(QGraphicsView::DontAdjustForAntialiasing|QGraphicsView::DontClipPainter|QGraphicsView::DontSavePainterState|QGraphicsView::IndirectPainting);
 
         retranslateUi(uno);
 

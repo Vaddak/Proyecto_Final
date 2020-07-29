@@ -12,22 +12,12 @@ MainWindow::MainWindow(QWidget *parent)
   , ui(new Ui::MainWindow)
 {
   ui->setupUi(this);
-  /*scene = new QGraphicsScene(0,0,800,1200);//La escena ocupa todo el escritorio
-  //scene->setBackgroundBrush(QPixmap(":/imagenes/fondomapa.jpg")); //Imagen de fondo
-  ui->graphicsView->setScene(scene);
-  view->show(); */
-  //scene->setSceneRect(0,0,2000,2000);
-
-  //view->setScene(scene);
-  //view->show();
   scene = new QGraphicsScene(0,0,1800,1000);
   scene->setBackgroundBrush(QBrush(QImage(":/main.jpg")));
   ui->graphicsView->setScene(scene);
+
   //sonido del menu
-
-
   sound->setMedia(QUrl("qrc:/Music/theme.mp3"));
-
   sound->play();
   instrucciones instrucciones;
   instrucciones.setModal(true);

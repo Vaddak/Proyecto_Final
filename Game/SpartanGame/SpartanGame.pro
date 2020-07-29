@@ -18,12 +18,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    floor.cpp \
     instrucciones.cpp \
     main.cpp \
     mainwindow.cpp \
     mregistro.cpp \
     multiplayer.cpp \
-    muro.cpp \
     scargar.cpp \
     solitario.cpp \
     spartan.cpp \
@@ -31,11 +31,11 @@ SOURCES += \
     uno.cpp
 
 HEADERS += \
+    floor.h \
     instrucciones.h \
     mainwindow.h \
     mregistro.h \
     multiplayer.h \
-    muro.h \
     scargar.h \
     solitario.h \
     spartan.h \

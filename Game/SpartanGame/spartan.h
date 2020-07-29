@@ -30,14 +30,15 @@ public:
     float filas,columnas;
     float ancho;
     float alto;
-    QRectF boundingRect() const;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-    void up();
-    void right();
     int getPosx();
     void setPosx(int px);
     int getPosy();
     void setPosy(int py);
+    QRectF boundingRect() const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    void up();
+    void right();
+
 
 
 

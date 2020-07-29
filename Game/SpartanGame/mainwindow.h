@@ -25,7 +25,7 @@
 #include <QtMultimedia/QMediaPlayer>
 #include <string.h>
 #include "spartan.h"
-#include "muro.h"
+#include "floor.h"
 
 using namespace std;
 
