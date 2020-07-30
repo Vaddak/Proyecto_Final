@@ -27,6 +27,19 @@ void floor::muro2(int x_, int y_, QGraphicsItem *parent)
 
 }
 
+void floor::muro3(int x_, int y_, QGraphicsItem *parent)
+{
+  filas = 0;
+  columnas = 0;
+  setPos(posx,posy);
+ pixmap = new QPixmap(":/Imagenes/wall3.jpg"); //Cargo la imagen del spartan
+  //dimensiones de c/U de las imagenes del sprite
+  ancho = 400;
+  alto  = 200;
+  setPos(x_,y_); //donde aparece el item
+
+}
+
 int floor::getPosx()
 {
     return this->x();

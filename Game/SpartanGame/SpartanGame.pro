@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    covenant.cpp \
     dos.cpp \
     floor.cpp \
     instrucciones.cpp \
@@ -33,6 +34,7 @@ SOURCES += \
     uno.cpp
 
 HEADERS += \
+    covenant.h \
     dos.h \
     floor.h \
     instrucciones.h \
@@ -64,5 +66,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    music.qrc \
-    pics.qrc
+    music.qrc
