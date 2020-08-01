@@ -4,7 +4,8 @@
 #include "scargar.h"
 #include "multiplayer.h"
 #include "instrucciones.h"
-
+#include "uno.h"
+#include "ui_uno.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -17,8 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
   ui->graphicsView->setScene(scene);
 
   //sonido del menu
-  sound->setMedia(QUrl("qrc:/Music/theme.mp3"));
-  sound->play();
+
   instrucciones instrucciones;
   instrucciones.setModal(true);
   instrucciones.exec();
@@ -49,7 +49,7 @@ void MainWindow::on_solitario_clicked() //implementacion del boton para acceder 
 
 void MainWindow::on_salir_clicked()
 {
-  sound->stop();
+
   this->close();
 
 
@@ -59,9 +59,13 @@ void MainWindow::on_multiplayer_clicked()
 {
 
   this->close(); //cierro la ventana
-  multiplayer multiplayer;
+  /*multiplayer multiplayer;
   multiplayer.setModal(true);
   multiplayer.exec();
-
+*/
+  uno uno;
+  uno.suno();
+  uno.setModal(true);
+  uno.exec();
 
 }

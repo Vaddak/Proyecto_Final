@@ -27,7 +27,12 @@ public:
   void yanme(int x_, int y_, QGraphicsItem *parent = 0);
   void eliteblue(int x_, int y_, QGraphicsItem *parent = 0);
   void elitered(int x_, int y_, QGraphicsItem *parent = 0);
-  void move();
+  void gruntright();
+  void gruntleft();
+  void elitebright();
+  void elitebleft();
+  void eliterleft();
+  void eliterright();
   void yanmemove();
   float filas,columnas;
   float ancho;
@@ -38,13 +43,14 @@ public:
   void setPosy(int py);
   QRectF boundingRect() const;
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-  QTimer *timer;
+  QTimer *timer, *timermove, *timermov;
   QPixmap *pixmap;
 
   signals:
 
   public slots:
-      void Actualizacion();
+      void gruntact();
+      void eliteact();
 };
 
 #endif // COVENANT_H

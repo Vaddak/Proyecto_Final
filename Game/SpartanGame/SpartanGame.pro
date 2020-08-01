@@ -18,7 +18,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bullet.cpp \
     covenant.cpp \
+    cuatro.cpp \
     dos.cpp \
     floor.cpp \
     instrucciones.cpp \
@@ -26,29 +28,36 @@ SOURCES += \
     mainwindow.cpp \
     mregistro.cpp \
     multiplayer.cpp \
+    music.cpp \
     scargar.cpp \
     solitario.cpp \
     spartan.cpp \
     sregistro.cpp \
     tres.cpp \
-    uno.cpp
+    uno.cpp \
+    win.cpp
 
 HEADERS += \
+    bullet.h \
     covenant.h \
+    cuatro.h \
     dos.h \
     floor.h \
     instrucciones.h \
     mainwindow.h \
     mregistro.h \
     multiplayer.h \
+    music.h \
     scargar.h \
     solitario.h \
     spartan.h \
     sregistro.h \
     tres.h \
-    uno.h
+    uno.h \
+    win.h
 
 FORMS += \
+    cuatro.ui \
     dos.ui \
     instrucciones.ui \
     mainwindow.ui \
@@ -58,7 +67,8 @@ FORMS += \
     solitario.ui \
     sregistro.ui \
     tres.ui \
-    uno.ui
+    uno.ui \
+    win.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -66,4 +76,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    music.qrc
+    music.qrc \
+    pics.qrc

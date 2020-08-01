@@ -23,13 +23,12 @@ void Spartan::spartan1(QGraphicsItem *parent)
   columnas = 0;
   setPos(posx,posy);
   pixmap = new QPixmap(":/Imagenes/spartan1.png"); //Cargo la imagen del spartan
-  pixmap->scaled(100,100);
   //dimensiones de c/U de las imagenes del sprite
-  ancho = 288;
+  ancho = 280;
   alto  = 288;
   timer->start(110);// modifica la velocidad en que itera entre las imagenes
   connect(timer,&QTimer::timeout,this,&Spartan::Actualizacion);
-  setPos(80,690); //donde aparece el personaje
+  setPos(100,678); //donde aparece el personaje
 }
 
 
@@ -41,11 +40,11 @@ void Spartan::spartan2(QGraphicsItem *parent)
   setPos(posx,posy);
  pixmap = new QPixmap(":/Imagenes/spartan2.png"); //Cargo la imagen del spartan
   //dimensiones de c/U de las imagenes del sprite
-  ancho = 288;
+  ancho = 280;
   alto  = 288;
   timer->start(110);// modifica la velocidad en que itera entre las imagenes
   connect(timer,&QTimer::timeout,this,&Spartan::Actualizacion);
-  setPos(90,690); //donde aparece el personaje
+  setPos(100,678); //donde aparece el personaje
 
 }
 
@@ -72,9 +71,9 @@ void Spartan::setPosy(int py)
 
 
 
-void Spartan::Actualizacion() //se desplaza en las posiciones para mostrar el movimiento de la boca del pacman
+void Spartan::Actualizacion() //se desplaza en las posiciones para mostrar el movimiento de la boca del personaje
 {
-    columnas +=285;
+    columnas +=300;
     if(columnas >=866)
     {
         columnas =0;

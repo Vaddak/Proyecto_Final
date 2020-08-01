@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>instrucciones</class>
- <widget class="QDialog" name="instrucciones">
+ <class>win</class>
+ <widget class="QDialog" name="win">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -26,33 +26,33 @@
     <string notr="true">border-image: url(:/Imagenes/instrucciones.png);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="aceptar">
+  <widget class="QPushButton" name="salir">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>740</y>
+     <x>390</x>
+     <y>770</y>
      <width>419</width>
      <height>100</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/Imagenes/aceptar.jpg);</string>
+    <string notr="true">border-image: url(:/Imagenes/salir.png);</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="text">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>70</y>
-     <width>1100</width>
-     <height>580</height>
+     <x>210</x>
+     <y>50</y>
+     <width>800</width>
+     <height>650</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/Imagenes/instructivo.png);</string>
+    <string notr="true">border-image: url(:/Imagenes/win.png);</string>
    </property>
    <property name="text">
     <string/>

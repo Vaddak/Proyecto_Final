@@ -25,7 +25,9 @@
 #include <QtMultimedia/QMediaPlayer>
 #include <string.h>
 #include "spartan.h"
+#include "covenant.h"
 #include "floor.h"
+#include "music.h"
 
 using namespace std;
 
@@ -57,11 +59,10 @@ private: //Creo los objetos
   Ui::MainWindow *ui;
   //QGraphicsScene *scene = new QGraphicsScene(this); //creo la escena
   QGraphicsScene *scene;
-  QMediaPlayer *sound = new QMediaPlayer();
 
 
- // QGraphicsView *view;
- // QGraphicsView *view = new QGraphicsView(this);
+
+
 
 
 

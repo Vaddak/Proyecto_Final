@@ -5,29 +5,42 @@
         <file>Imagenes/barra.png</file>
         <file>Imagenes/boton.jpg</file>
         <file>Imagenes/cargar.jpg</file>
+        <file>Imagenes/elite1.png</file>
+        <file>Imagenes/elite2.png</file>
+        <file>Imagenes/grunt1.png</file>
         <file>Imagenes/haloc.png</file>
         <file>Imagenes/instructivo.png</file>
         <file>Imagenes/jugar.png</file>
         <file>Imagenes/logo.jpg</file>
         <file>Imagenes/main.jpg</file>
+        <file>Imagenes/mapa1.jpg</file>
+        <file>Imagenes/mapa2.jpg</file>
+        <file>Imagenes/mapa3.jpg</file>
+        <file>Imagenes/mapa4.jpg</file>
         <file>Imagenes/multijugador.png</file>
         <file>Imagenes/nickname.jpg</file>
         <file>Imagenes/nicknames.png</file>
+        <file>Imagenes/p1.jpg</file>
+        <file>Imagenes/p2.jpg</file>
         <file>Imagenes/registro.png</file>
         <file>Imagenes/salir.png</file>
         <file>Imagenes/scargar.png</file>
         <file>Imagenes/solitario.png</file>
-        <file>Imagenes/mapa1.jpg</file>
-        <file>Imagenes/p2.jpg</file>
         <file>Imagenes/spartan1.png</file>
-        <file>Imagenes/p1.jpg</file>
         <file>Imagenes/spartan2.png</file>
         <file>Imagenes/wall1.jpg</file>
         <file>Imagenes/wall2.jpg</file>
         <file>Imagenes/wall3.jpg</file>
         <file>Imagenes/wall4.jpg</file>
-        <file>Imagenes/mapa2.jpg</file>
-        <file>Imagenes/mapa3.jpg</file>
-        <file>Imagenes/mapa4.jpg</file>
+        <file>Imagenes/yanme.png</file>
+        <file>Imagenes/pelican1.png</file>
+        <file>Imagenes/pelican2.png</file>
+        <file>Imagenes/phantom1.png</file>
+        <file>Imagenes/phantom2.png</file>
+        <file>Imagenes/instrucciones.png</file>
+        <file>Imagenes/win.png</file>
+        <file>Imagenes/elite1right.png</file>
+        <file>Imagenes/elite2right.png</file>
+        <file>Imagenes/grunt1right.png</file>
     </qresource>
 </RCC>

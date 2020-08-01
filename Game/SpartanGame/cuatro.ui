@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>tres</class>
- <widget class="QDialog" name="tres">
+ <class>cuatro</class>
+ <widget class="QDialog" name="cuatro">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>6000</width>
+    <width>1800</width>
     <height>1000</height>
    </rect>
   </property>
@@ -18,18 +18,12 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>6000</width>
+     <width>1800</width>
      <height>1000</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/Imagenes/mapa3.jpg);</string>
-   </property>
-   <property name="verticalScrollBarPolicy">
-    <enum>Qt::ScrollBarAlwaysOff</enum>
-   </property>
-   <property name="horizontalScrollBarPolicy">
-    <enum>Qt::ScrollBarAlwaysOff</enum>
+    <string notr="true">border-image: url(:/Imagenes/mapa4.jpg);</string>
    </property>
   </widget>
  </widget>

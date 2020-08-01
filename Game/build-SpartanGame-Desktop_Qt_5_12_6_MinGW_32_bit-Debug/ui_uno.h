@@ -25,10 +25,12 @@ public:
     {
         if (uno->objectName().isEmpty())
             uno->setObjectName(QString::fromUtf8("uno"));
-        uno->resize(3500, 1000);
+        uno->resize(6000, 1000);
+        uno->setMaximumSize(QSize(6000, 1000));
         graphicsView = new QGraphicsView(uno);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(0, 0, 3500, 1000));
+        graphicsView->setGeometry(QRect(0, 0, 6000, 1000));
+        graphicsView->setMaximumSize(QSize(6000, 1000));
         graphicsView->setStyleSheet(QString::fromUtf8("background-image: url(:/Imagenes/mapa1.jpg);"));
         graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

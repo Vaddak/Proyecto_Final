@@ -6,6 +6,11 @@
 #include "ui_uno.h"
 #include "dos.h"
 #include "ui_dos.h"
+#include "cuatro.h"
+#include "ui_cuatro.h"
+#include "tres.h"
+#include "ui_tres.h"
+
 void mregistro::mescribir(string a, string b) //funcion que guarda los nombres de los jugadores en multiplayer
 {
 
@@ -46,14 +51,25 @@ void mregistro::on_aceptar_clicked()
   b = v.toUtf8().constData();
   mescribir(a,b);
   this->close();
- /* uno uno;
+  /*uno uno;
+  uno.suno();
   uno.setModal(true);
   uno.exec();
-  */
   dos dos;
-  dos.mdos();
+  dos.sdos();
   dos.setModal(true);
   dos.exec();
+  cuatro cuatro;
+  cuatro.scuatro();
+  cuatro.setModal(true);
+  cuatro.exec();
+
+  tres tres;
+  tres.mtres();
+  tres.setModal(true);
+  tres.exec();
+  */
+
 
 }
 
