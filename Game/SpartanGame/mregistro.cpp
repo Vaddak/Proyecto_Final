@@ -62,19 +62,18 @@ void mregistro::on_aceptar_clicked()
   dos.setModal(true);
   dos.exec();
 
+  tres tres;
+  tres.mtres();
+  tres.setModal(true);
+  tres.exec();
+
+
+*/
   cuatro cuatro;
   cuatro.scuatro();
   cuatro.setModal(true);
   cuatro.exec();
 
-
-
-*/
-
-  tres tres;
-  tres.stres();
-  tres.setModal(true);
-  tres.exec();
 
 
 

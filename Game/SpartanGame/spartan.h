@@ -48,4 +48,5 @@ public slots:
     void Actualizacion();
 
 };
+
 #endif // SPARTAN_H

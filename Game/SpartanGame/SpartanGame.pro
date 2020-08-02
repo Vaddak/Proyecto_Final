@@ -32,6 +32,7 @@ SOURCES += \
     mregistro.cpp \
     multiplayer.cpp \
     music.cpp \
+    pelican.cpp \
     scargar.cpp \
     solitario.cpp \
     spartan.cpp \
@@ -54,6 +55,7 @@ HEADERS += \
     mregistro.h \
     multiplayer.h \
     music.h \
+    pelican.h \
     scargar.h \
     solitario.h \
     spartan.h \
