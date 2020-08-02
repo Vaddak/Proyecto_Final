@@ -27,30 +27,20 @@ void uno::suno(QWidget *parent)
   scene->addItem(player1); //lo agrego a la escena
 
   //----------------------- AGREGO ENEMIGOS ------------------------
-  grunt1 = new covenant();
-  grunt1->grunt(1200,680);
+  grunt1 = new enemy1(1200,680);
   scene->addItem(grunt1);
 
-  grunt2 = new covenant();
-  grunt2->grunt(1800,680);
-  //grunt2->movegrunt();
+  grunt2 = new enemy1(1800,680);
   scene->addItem(grunt2);
 
-  grunt3 = new covenant();
-  grunt3->grunt(3000,680);
- // grunt3->movegrunt();
+  grunt3 = new enemy1(3000,680);
   scene->addItem(grunt3);
 
-  grunt4 = new covenant();
-  grunt4->grunt(4000,680);
- // grunt4->movegrunt();
+  grunt4 = new enemy1(4000,680);
   scene->addItem(grunt4);
 
-  grunt5 = new covenant();
-  grunt5->grunt(4300,680);
- // grunt5->movegrunt();
+  grunt5 = new enemy1(4300,680);
   scene->addItem(grunt5);
-
 
 
 
@@ -137,33 +127,25 @@ void uno::muno(QWidget *parent)
   scene->addItem(player2);
 
   //-------------------------- AGREGO ENEMIGOS ----------------------------------
-
-  grunt1 = new covenant();
-  grunt1->grunt(1200,680);
+  grunt1 = new enemy1(5600,680);
   scene->addItem(grunt1);
 
-  grunt2 = new covenant();
-  grunt2->grunt(1800,680);
+  grunt2 = new enemy1(1800,680);
   scene->addItem(grunt2);
 
-  grunt3 = new covenant();
-  grunt3->grunt(3000,680);
+  grunt3 = new enemy1(3000,680);
   scene->addItem(grunt3);
 
-  grunt4 = new covenant();
-  grunt4->grunt(4000,680);
+  grunt4 = new enemy1(4000,680);
   scene->addItem(grunt4);
 
-  grunt5 = new covenant();
-  grunt5->grunt(4300,680);
+  grunt5 = new enemy1(4300,680);
   scene->addItem(grunt5);
 
-  grunt6 = new covenant();
-  grunt6->grunt(2400,680);
+  grunt6 = new enemy1(2400,680);
   scene->addItem(grunt6);
 
-  grunt7 = new covenant();
-  grunt7->grunt(5200,680);
+  grunt7 = new enemy1(5200,680);
   scene->addItem(grunt7);
 
 

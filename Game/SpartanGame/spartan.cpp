@@ -1,20 +1,6 @@
 #include "spartan.h"
 
-/*Spartan::Spartan(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent)
-{
 
-    timer = new QTimer();
-    filas = 0;
-    columnas = 0;
-    setPos(posx,posy);
-   pixmap = new QPixmap(":/Imagenes/spartan1.png"); //Cargo la imagen del spartan
-    //dimensiones de c/U de las imagenes del sprite
-    ancho = 288;
-    alto  = 288;
-    timer->start(80);// modifica la velocidad en que itera entre las imagenes
-    connect(timer,&QTimer::timeout,this,&Spartan::Actualizacion);
-    setPos(350,700); //donde aparece el personaje
-}  */
 
 void Spartan::spartan1(QGraphicsItem *parent)
 {
@@ -102,5 +88,5 @@ void Spartan::up() //salto del spartan
 
 void Spartan::right() //desplazamiento del spartan
 {
-  this->setPos(x()+5,y());
+  this->setPos(x()+60,y());
 }

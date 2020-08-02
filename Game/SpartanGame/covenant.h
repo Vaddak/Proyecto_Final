@@ -16,24 +16,27 @@
 #include <QPixmap>
 #include <QIcon>
 
+
 class covenant:  public QObject, public QGraphicsPixmapItem
 {
   Q_OBJECT
   int posx;
   int posy;
+  int segundo=0;
+  int e = 30;
+  bool m = true;;
 
 public:
+ // covenant(QGraphicsItem *parent=0);
   void grunt(int x_, int y_, QGraphicsItem *parent = 0);
-  void yanme(int x_, int y_, QGraphicsItem *parent = 0);
+  void yanme(int x_, int y_);
   void eliteblue(int x_, int y_, QGraphicsItem *parent = 0);
   void elitered(int x_, int y_, QGraphicsItem *parent = 0);
-  void gruntright();
-  void gruntleft();
   void elitebright();
   void elitebleft();
   void eliterleft();
   void eliterright();
-  void yanmemove();
+
   float filas,columnas;
   float ancho;
   float alto;
@@ -43,14 +46,18 @@ public:
   void setPosy(int py);
   QRectF boundingRect() const;
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-  QTimer *timer, *timermove, *timermov;
+  QTimer *timer, *timermove, *timermov, *time;
   QPixmap *pixmap;
 
   signals:
 
   public slots:
+      void second();
+      void yanmemove();
       void gruntact();
       void eliteact();
+      void gruntright();
+      void gruntleft();
 };
 
 #endif // COVENANT_H

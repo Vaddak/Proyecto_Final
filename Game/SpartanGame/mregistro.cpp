@@ -51,27 +51,34 @@ void mregistro::on_aceptar_clicked()
   b = v.toUtf8().constData();
   mescribir(a,b);
   this->close();
-  /*uno uno;
-  uno.suno();
+  /*
+  uno uno;
+  uno.muno();
   uno.setModal(true);
   uno.exec();
+
   dos dos;
-  dos.sdos();
+  dos.mdos();
   dos.setModal(true);
   dos.exec();
+
   cuatro cuatro;
   cuatro.scuatro();
   cuatro.setModal(true);
   cuatro.exec();
 
+
+
+*/
+
   tres tres;
-  tres.mtres();
+  tres.stres();
   tres.setModal(true);
   tres.exec();
-  */
 
 
-}
+
+};
 
 
 

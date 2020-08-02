@@ -19,9 +19,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     bullet.cpp \
-    covenant.cpp \
     cuatro.cpp \
     dos.cpp \
+    enemy1.cpp \
+    enemy2.cpp \
+    enemy3.cpp \
+    enemy4.cpp \
     floor.cpp \
     instrucciones.cpp \
     main.cpp \
@@ -39,9 +42,12 @@ SOURCES += \
 
 HEADERS += \
     bullet.h \
-    covenant.h \
     cuatro.h \
     dos.h \
+    enemy1.h \
+    enemy2.h \
+    enemy3.h \
+    enemy4.h \
     floor.h \
     instrucciones.h \
     mainwindow.h \

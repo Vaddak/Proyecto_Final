@@ -25,9 +25,12 @@
 #include <QtMultimedia/QMediaPlayer>
 #include <string.h>
 #include "spartan.h"
-#include "covenant.h"
 #include "floor.h"
 #include "music.h"
+#include "enemy1.h"
+#include "enemy2.h"
+#include "enemy3.h"
+#include "enemy4.h"
 
 using namespace std;
 

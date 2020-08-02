@@ -27,29 +27,24 @@ void tres::stres(QWidget *parent)
   scene->addItem(player1); //lo agrego a la escena
 
   //----------------------- AGREGO ENEMIGOS ------------------------
-  grunt1 = new covenant();
-  grunt1->grunt(2400,680);
-  scene->addItem(grunt1);
 
-  elite1 = new covenant();
-  elite1->elitered(4400,670);
+  grunt2 = new enemy1(4400,680);
+  scene->addItem(grunt2);
+
+  elite1 = new enemy2(1100,675);
   scene->addItem(elite1);
 
-  elite2 = new covenant();
-  elite2->eliteblue(1680,670);
+  elite2 = new enemy2(1685,675);
   scene->addItem(elite2);
 
-  elite3 = new covenant();
-  elite3->elitered(2000,670);
+  elite3 = new enemy3(2000,675);
   scene->addItem(elite3);
 
-  elite4 = new covenant();
-  elite4->elitered(2500,670);
-  scene->addItem(elite4);
+  elite5 = new enemy3(2900,675);
+  scene->addItem(elite5);
 
-  yanme1 = new covenant();
-  yanme1->yanme(1600,123);
-  scene->addItem(yanme1);
+  yanme2 = new enemy4(4800,100);
+  scene->addItem(yanme2);
 
   //-------------- AGREGO EL SUELO AL NIVEL -----------------------
   wall1 = new floor();
@@ -118,7 +113,6 @@ void tres::stres(QWidget *parent)
 }
 
 
-
 //----------------------------------------------------- MODO MULTIJUGADOR ------------------------------------------------------------------------
 void tres::mtres(QWidget *parent)
 {
@@ -131,43 +125,35 @@ void tres::mtres(QWidget *parent)
   player2->spartan2();
   scene->addItem(player2);
 
-  //-------------------------- AGREGO ENEMIGOS ----------------------------------
 
-  grunt1 = new covenant();
-  grunt1->grunt(2400,680);
+  //-------------------------- AGREGO ENEMIGOS ----------------------------------
+  grunt1 = new enemy1(2400,680);
   scene->addItem(grunt1);
 
-  grunt2 = new covenant();
-  grunt2->grunt(4400,680);
+  grunt2 = new enemy1(4400,680);
   scene->addItem(grunt2);
 
-  elite1 = new covenant();
-  elite1->elitered(900,670);
+  elite1 = new enemy2(1100,675);
   scene->addItem(elite1);
 
-  elite2 = new covenant();
-  elite2->eliteblue(1680,670);
+  elite2 = new enemy2(1685,675);
   scene->addItem(elite2);
 
-  elite3 = new covenant();
-  elite3->elitered(2000,670);
+  elite3 = new enemy3(2000,675);
   scene->addItem(elite3);
 
-  elite4 = new covenant();
-  elite4->elitered(2500,670);
+  elite4 = new enemy3(2500,675);
   scene->addItem(elite4);
 
-  elite5 = new covenant();
-  elite5->eliteblue(2900,670);
+  elite5 = new enemy3(2900,675);
   scene->addItem(elite5);
 
-  yanme1 = new covenant();
-  yanme1->yanme(1600,123);
+  yanme1 = new enemy4(762,120);
   scene->addItem(yanme1);
 
-  yanme2 = new covenant();
-  yanme2->yanme(4900,200);
+  yanme2 = new enemy4(4800,100);
   scene->addItem(yanme2);
+
 
   //--------------------- AGREGO EL SUELO DEL NIVEL  -----------------------------
   wall1 = new floor();

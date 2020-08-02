@@ -16,9 +16,6 @@ MainWindow::MainWindow(QWidget *parent)
   scene = new QGraphicsScene(0,0,1800,1000);
   scene->setBackgroundBrush(QBrush(QImage(":/main.jpg")));
   ui->graphicsView->setScene(scene);
-
-  //sonido del menu
-
   instrucciones instrucciones;
   instrucciones.setModal(true);
   instrucciones.exec();
@@ -59,13 +56,8 @@ void MainWindow::on_multiplayer_clicked()
 {
 
   this->close(); //cierro la ventana
-  /*multiplayer multiplayer;
+  multiplayer multiplayer;
   multiplayer.setModal(true);
   multiplayer.exec();
-*/
-  uno uno;
-  uno.suno();
-  uno.setModal(true);
-  uno.exec();
 
 }

@@ -30,32 +30,25 @@ void dos::mdos(QWidget *parent)
 
 
   //------------------- AGREGO ENEMIGOS ----------------------------
-  grunt1 = new covenant();
-  grunt1->grunt(1600,680);
+  grunt1 = new enemy1(1600,680);
   scene->addItem(grunt1);
 
-  grunt2 = new covenant();
-  grunt2->grunt(3600,680);
+  grunt2 = new enemy1(3600,680);
   scene->addItem(grunt2);
 
-  elite1 = new covenant();
-  elite1->elitered(800,670);
+  elite1 = new enemy2(900,675);
   scene->addItem(elite1);
 
-  elite2 = new covenant();
-  elite2->eliteblue(2000,670);
+  elite2 = new enemy2(2000,675);
   scene->addItem(elite2);
 
-  elite3 = new covenant();
-  elite3->eliteblue(2560,670);
+  elite3 = new enemy2(2560,675);
   scene->addItem(elite3);
 
-  elite4 = new covenant();
-  elite4->elitered(4000,670);
+  elite4 = new enemy3(4000,675);
   scene->addItem(elite4);
 
-  elite5 = new covenant();
-  elite5->elitered(4800,670);
+  elite5 = new enemy3(4750,675);
   scene->addItem(elite5);
 
 
@@ -136,24 +129,19 @@ void dos::sdos(QWidget *parent)
 
 
   //------------------- AGREGO ENEMIGOS ----------------------------
-  grunt1 = new covenant();
-  grunt1->grunt(1600,680);
+  grunt1 = new enemy1(1600,680);
   scene->addItem(grunt1);
 
-  grunt2 = new covenant();
-  grunt2->grunt(3600,680);
+  grunt2 = new enemy1(3600,680);
   scene->addItem(grunt2);
 
-  elite2 = new covenant();
-  elite2->eliteblue(2000,670);
-  scene->addItem(elite2);
+  elite1 = new enemy2(900,675);
+  scene->addItem(elite1);
 
-  elite4 = new covenant();
-  elite4->elitered(4000,670);
-  scene->addItem(elite4);
+  elite3 = new enemy2(2560,675);
+  scene->addItem(elite3);
 
-  elite5 = new covenant();
-  elite5->elitered(4800,670);
+  elite5 = new enemy3(4750,675);
   scene->addItem(elite5);
 
 

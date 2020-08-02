@@ -1,7 +1,22 @@
 #include "covenant.h"
 
 
+//--------------------------------- CONSTRUCTOR DE CADA ENEMIGO -------------------------------------------
+/*covenant::covenant(QGraphicsItem *parent)
+{
+  setPos(800,670);
+  connect(timermove,SIGNAL(timeout()),this,SLOT(second()));
+  timermove->start(1000);
 
+  if(segundo==5){
+      connect(timermov,SIGNAL(timeout()),this,SLOT(gruntright()));
+    }
+  else if(segundo>5 && segundo<=10){
+      connect(timermov,SIGNAL(timeout()),this,SLOT(gruntleft()));
+    }
+   timermov->start(800);
+}
+*/
 void covenant::grunt(int x_, int y_, QGraphicsItem *parent)
 {
   timer = new QTimer();
@@ -18,28 +33,20 @@ void covenant::grunt(int x_, int y_, QGraphicsItem *parent)
   connect(timer,&QTimer::timeout,this,&covenant::gruntact);
   setPos(x_,y_);
 
-  timermov->start(500);
-  while(timermov){
-  connect(timermov,&QTimer::timeout,this,&covenant::gruntright);
- // timermov->setInterval(500);
-  break;
-    }
-
-  /*timermove->start(1000);
-  connect(timermove,&QTimer::timeout,this,&covenant::gruntleft);
-  timermove->setInterval(1000);*/
 
 
 
 }
 
-
-void covenant::yanme(int x_, int y_, QGraphicsItem *parent)
+//--------------------------------------------------- YANME  --------------------------------------------------------------
+void covenant::yanme(int x_, int y_)
 {
-  setPos(posx,posy);
-  pixmap = new QPixmap(":/Imagenes/yanme.png");
   setPos(x_, y_);
-}
+  pixmap = new QPixmap(":/Imagenes/yanme.png");  
+  time = new QTimer();
+  connect(time,SIGNAL(timeout()),this,SLOT(yanmemove()));
+  time->start(100);
+};
 
 
 void covenant::eliteblue(int x_, int y_, QGraphicsItem *parent)
@@ -47,7 +54,7 @@ void covenant::eliteblue(int x_, int y_, QGraphicsItem *parent)
   timer = new QTimer();
   filas = 0;
   columnas = 0;
-  setPos(posx,posy);
+ // setPos(posx,posy);
  pixmap = new QPixmap(":/Imagenes/elite1.png"); //Cargo la imagen del grunt
  pixmap->scaled(100,100);
   //dimensiones de c/U de las imagenes del sprite
@@ -75,8 +82,16 @@ void covenant::elitered(int x_, int y_, QGraphicsItem *parent)
   connect(timer,&QTimer::timeout,this,&covenant::eliteact);
   setPos(x_,y_); //donde aparece el personaje
 
+
 }
 
+void covenant::second(){
+  if(segundo==10){
+      segundo = 0;
+    }
+  segundo += 1;
+
+}
 
 
 //--------------------------------------------------------------- MOVIMIENTO DE ENEMIGOS ---------------------------------------------------------------
@@ -87,10 +102,7 @@ void covenant::gruntright()
 {
   pixmap = new QPixmap(":/Imagenes/grunt1right.png");
   pixmap->scaled(100,100);
-  setPos(x()+200,y());
-  pixmap = new QPixmap(":/Imagenes/grunt1.png");
-  pixmap->scaled(100,100);
-  setPos(x()-200,y());
+  setPos(x()+50,y());
 }
 
 
@@ -98,8 +110,40 @@ void covenant::gruntleft()
 {
   pixmap = new QPixmap(":/Imagenes/grunt1.png");
   pixmap->scaled(100,100);
-  setPos(x()-200,y());
+  setPos(x()-50,y());
 }
+
+
+
+
+//----------------- MOVIMIENTO DE YANME ----------------------
+void covenant::yanmemove()
+{
+  int n = x();
+
+  if(n>4800){
+      m = true;
+    }
+  else if(n<800){
+      m = false;
+    }
+
+  if(m==true){
+      n = n - e;
+      setPos(n,y());
+    }
+  else if(m==false){
+      n = n + e;
+      setPos(n,y());
+    }
+
+
+
+
+
+
+
+};
 
 
 

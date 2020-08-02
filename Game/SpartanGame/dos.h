@@ -21,7 +21,9 @@ private:
   Ui::dos *ui;
   QGraphicsScene *scene;
   Spartan *player1, *player2;
-  covenant *grunt1, *grunt2, *elite1, *elite2, *elite3, *elite4, *elite5;
+  enemy1 *grunt1, *grunt2;
+  enemy2 *elite1, *elite2, *elite3;
+  enemy3 *elite5, *elite4;
   floor *wall1, *wall2, *wall3, *wall4, *wall5, *wall6, *wall7, *wall8, *wall9, *wall10, *wall11, *wall12, *wall13, *wall14, *wall15;
 
 };
