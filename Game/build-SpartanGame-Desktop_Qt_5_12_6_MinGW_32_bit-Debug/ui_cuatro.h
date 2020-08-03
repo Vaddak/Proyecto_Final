@@ -30,6 +30,9 @@ public:
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
         graphicsView->setGeometry(QRect(0, 0, 1800, 1000));
         graphicsView->setStyleSheet(QString::fromUtf8("border-image: url(:/Imagenes/mapa4.jpg);"));
+        graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        graphicsView->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
 
         retranslateUi(cuatro);
 

@@ -67,10 +67,10 @@ void mregistro::on_aceptar_clicked()
   tres.setModal(true);
   tres.exec();
 
-
 */
+
   cuatro cuatro;
-  cuatro.scuatro();
+  cuatro.mcuatro();
   cuatro.setModal(true);
   cuatro.exec();
 

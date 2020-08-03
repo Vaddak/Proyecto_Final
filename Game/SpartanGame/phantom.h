@@ -1,5 +1,5 @@
-#ifndef ENEMY4_H
-#define ENEMY4_H
+#ifndef PHANTOM_H
+#define PHANTOM_H
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +17,7 @@
 #include <QGraphicsPixmapItem>
 #include <QObject>
 
-class enemy4: public QObject, public QGraphicsPixmapItem
+class phantom: public QObject, public QGraphicsPixmapItem
 {
   Q_OBJECT
 
@@ -32,18 +32,20 @@ public:
   float alto;
   QRectF boundingRect() const;
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-  enemy4(int x_, int y_, QGraphicsItem *parent=0);
+  void phantom1(QGraphicsItem *parent=0);
+  void phantom2(QGraphicsItem *parent=0);
 
 
 
 public slots:
-  void move();
+  void movey();
+  void movex();
 
 private:
   QPixmap *pixmap;
+  QTimer *timer1;
   QTimer *timer;
 
 
 };
-
-#endif // ENEMY4_H
+#endif // PHANTOM_H

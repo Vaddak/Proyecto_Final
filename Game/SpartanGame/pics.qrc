@@ -42,5 +42,6 @@
         <file>Imagenes/elite1right.png</file>
         <file>Imagenes/elite2right.png</file>
         <file>Imagenes/grunt1right.png</file>
+        <file>Imagenes/save.png</file>
     </qresource>
 </RCC>

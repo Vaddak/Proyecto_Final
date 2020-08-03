@@ -12,12 +12,6 @@ enemy4::enemy4(int x_, int y_, QGraphicsItem *parent): QObject(), QGraphicsPixma
    columnas = 0;
 
 
-   // -------------------- SPRITE -----------------------
-   timer1 = new QTimer();
-   QTimer *tim = new QTimer();
-   tim->start(100);
-   connect(tim,SIGNAL(timeout()),this,SLOT(eliteact()));
-
 
   // --------- MOVIMIENTO DE IZQUIERDA A DERECHA --------
    timer = new QTimer();
@@ -28,17 +22,6 @@ enemy4::enemy4(int x_, int y_, QGraphicsItem *parent): QObject(), QGraphicsPixma
 
 
 //------------------------------------------------- MOVIMIENTO DEL ENEMIGO --------------------------------------------------------
-void enemy4::yanmeact()
-{
-  columnas +=250;
-  if(columnas >=730)
-  {
-      columnas =0;
-  }
-  this->update(-ancho/2,-alto/2,ancho,alto);
-}
-
-
 void enemy4::move()
 {
   int n = x();

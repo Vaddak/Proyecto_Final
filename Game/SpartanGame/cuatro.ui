@@ -25,6 +25,15 @@
    <property name="styleSheet">
     <string notr="true">border-image: url(:/Imagenes/mapa4.jpg);</string>
    </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustIgnored</enum>
+   </property>
   </widget>
  </widget>
  <resources/>

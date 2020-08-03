@@ -1,5 +1,5 @@
-#ifndef ENEMY4_H
-#define ENEMY4_H
+#ifndef CHECKPOINT_H
+#define CHECKPOINT_H
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,33 +17,28 @@
 #include <QGraphicsPixmapItem>
 #include <QObject>
 
-class enemy4: public QObject, public QGraphicsPixmapItem
+class checkpoint: public QObject, public QGraphicsPixmapItem
 {
   Q_OBJECT
 
 public:
   int posx;
   int posy;
-  int segundo=0;
-  int e = 50;
-  bool m = true;
-  float filas=0,columnas=0;
   float ancho;
+  float filas=0,columnas=0;
   float alto;
   QRectF boundingRect() const;
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-  enemy4(int x_, int y_, QGraphicsItem *parent=0);
+  checkpoint(int x_, int y_, QGraphicsItem *parent=0);
 
 
 
-public slots:
-  void move();
 
 private:
   QPixmap *pixmap;
-  QTimer *timer;
+
 
 
 };
 
-#endif // ENEMY4_H
+#endif // CHECKPOINT_H
