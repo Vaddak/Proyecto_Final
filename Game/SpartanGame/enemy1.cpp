@@ -42,11 +42,11 @@ void enemy1::gruntact()
 void enemy1::move()
 {
   int n = x();
-  if(n>5500){
+  if(n>1700){
       pixmap = new QPixmap(":/Imagenes/grunt1.png");
       m = true;
     }
-  else if(n<800){
+  else if(n<500){
       pixmap = new QPixmap(":/Imagenes/grunt1right.png");
       m = false;
     }

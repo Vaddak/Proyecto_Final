@@ -1,57 +1,40 @@
 #include "floor.h"
 
-void floor::muro1(int x_, int y_, QGraphicsItem *parent)
+floor::floor(int x_, int y_, QGraphicsItem *parent)
 {
-
   filas = 0;
   columnas = 0;
   setPos(posx,posy);
-  pixmap = new QPixmap(":/Imagenes/wall1.jpg"); //Cargo la imagen del spartan
   ancho = 400;
   alto  = 200;
   setPos(x_,y_); //donde aparece el item
 }
 
 
-void floor::muro2(int x_, int y_, QGraphicsItem *parent)
+void floor::muro1()
 {
-;
-  filas = 0;
-  columnas = 0;
-  setPos(posx,posy);
- pixmap = new QPixmap(":/Imagenes/wall2.jpg"); //Cargo la imagen del spartan
-  //dimensiones de c/U de las imagenes del sprite
-  ancho = 400;
-  alto  = 200;
-  setPos(x_,y_); //donde aparece el item
-
+  pixmap = new QPixmap(":/Imagenes/wall1.jpg");
 }
 
-void floor::muro3(int x_, int y_, QGraphicsItem *parent)
-{
-  filas = 0;
-  columnas = 0;
-  setPos(posx,posy);
- pixmap = new QPixmap(":/Imagenes/wall3.jpg"); //Cargo la imagen del spartan
-  //dimensiones de c/U de las imagenes del sprite
-  ancho = 400;
-  alto  = 200;
-  setPos(x_,y_); //donde aparece el item
 
+void floor::muro2()
+{
+ pixmap = new QPixmap(":/Imagenes/wall2.jpg");
 }
 
-void floor::muro4(int x_, int y_, QGraphicsItem *parent)
-{
-  filas = 0;
-  columnas = 0;
-  setPos(posx,posy);
-  pixmap = new QPixmap(":/Imagenes/wall4.jpg"); //Cargo la imagen del spartan
-  //dimensiones de c/U de las imagenes del sprite
-  ancho = 500;
-  alto  = 155;
-  setPos(x_,y_); //donde aparece el item
 
+void floor::muro3()
+{
+ pixmap = new QPixmap(":/Imagenes/wall3.jpg");
 }
+
+
+void floor::muro4()
+{
+  pixmap = new QPixmap(":/Imagenes/wall4.jpg");
+}
+
+
 
 int floor::getPosx()
 {

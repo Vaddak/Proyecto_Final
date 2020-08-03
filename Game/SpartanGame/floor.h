@@ -23,11 +23,11 @@ class floor:  public QObject, public QGraphicsPixmapItem
   int posx, posy;
 
 public:
-
-  void muro1(int x_, int y_, QGraphicsItem *parent = 0);
-  void muro2(int x_, int y_, QGraphicsItem *parent = 0);
-  void muro3(int x_, int y_, QGraphicsItem *parent = 0);
-  void muro4(int x_, int y_, QGraphicsItem *parent = 0);
+  floor(int x_, int y_, QGraphicsItem *parent = 0);
+  void muro1();
+  void muro2();
+  void muro3();
+  void muro4();
   QPixmap *pixmap;
   float filas,columnas;
   float ancho;

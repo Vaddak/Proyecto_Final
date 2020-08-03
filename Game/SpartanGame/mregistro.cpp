@@ -52,22 +52,18 @@ void mregistro::on_aceptar_clicked()
   mescribir(a,b);
   this->close();
   /*
-  uno uno;
-  uno.muno();
-  uno.setModal(true);
-  uno.exec();
+
 
   dos dos;
   dos.mdos();
   dos.setModal(true);
   dos.exec();
 
-  tres tres;
+res tres;
   tres.mtres();
   tres.setModal(true);
   tres.exec();
 
-*/
 
   cuatro cuatro;
   cuatro.mcuatro();
@@ -75,7 +71,12 @@ void mregistro::on_aceptar_clicked()
   cuatro.exec();
 
 
+*/
 
+  uno uno;
+  uno.muno();
+  uno.setModal(true);
+  uno.exec();
 
 };
 

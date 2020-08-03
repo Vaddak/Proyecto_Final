@@ -18,8 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    body.cpp \
-    bullet.cpp \
+    bala.cpp \
     checkpoint.cpp \
     cuatro.cpp \
     dos.cpp \
@@ -37,17 +36,17 @@ SOURCES += \
     pelican.cpp \
     phantom.cpp \
     scargar.cpp \
+    score.cpp \
     solitario.cpp \
     spartan.cpp \
     sregistro.cpp \
-    test.cpp \
     tres.cpp \
     uno.cpp \
+    vida.cpp \
     win.cpp
 
 HEADERS += \
-    body.h \
-    bullet.h \
+    bala.h \
     checkpoint.h \
     cuatro.h \
     dos.h \
@@ -64,12 +63,13 @@ HEADERS += \
     pelican.h \
     phantom.h \
     scargar.h \
+    score.h \
     solitario.h \
     spartan.h \
     sregistro.h \
-    test.h \
     tres.h \
     uno.h \
+    vida.h \
     win.h
 
 FORMS += \

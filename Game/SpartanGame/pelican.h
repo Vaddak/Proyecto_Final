@@ -28,8 +28,8 @@ public:
   float alto;
   QRectF boundingRect() const;
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-  void pelican1(QGraphicsItem *parent=0);
-  void pelican2(QGraphicsItem *parent=0);
+  Pelican(int x_, int y_, QGraphicsItem *parent=0);
+  void paint2();
   void up();
   void down();
   void left();

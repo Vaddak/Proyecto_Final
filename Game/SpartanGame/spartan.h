@@ -15,16 +15,15 @@
 #include <QTimer>
 #include <QPixmap>
 #include <QIcon>
-
+#include "bala.h"
 class Spartan:  public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
     int posx, posy;
 public:
 
-    //Spartan(QGraphicsItem *parent = 0);
-    void spartan1(QGraphicsItem *parent = 0);
-    void spartan2(QGraphicsItem *parent = 0);
+    Spartan(QGraphicsItem *parent = 0);
+    void spartan2();
     QTimer *timer;
     QPixmap *pixmap;
     float filas,columnas;
@@ -38,6 +37,7 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     void up();
     void right();
+    void shoot();
 
 
 

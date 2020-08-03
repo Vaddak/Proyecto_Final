@@ -1,9 +1,11 @@
 #include "pelican.h"
 
 //---------------------  CONSTRUCTORES ----------------------------------------
-void Pelican::pelican1(QGraphicsItem *parent)
+
+
+Pelican::Pelican(int x_, int y_, QGraphicsItem *parent)
 {
-  setPos(400, 400);
+  setPos(x_, y_);
   pixmap = new QPixmap(":/Imagenes/pelican1.png");
   pixmap->scaled(100,100);
   ancho = 500;
@@ -12,16 +14,10 @@ void Pelican::pelican1(QGraphicsItem *parent)
   columnas = 0;
 }
 
-
-void Pelican::pelican2(QGraphicsItem *parent)
+void Pelican::paint2()
 {
-  setPos(400, 400);
   pixmap = new QPixmap(":/Imagenes/pelican2.png");
   pixmap->scaled(100,100);
-  ancho = 519;
-  alto  = 200;
-  filas = 0;
-  columnas = 0;
 }
 
 

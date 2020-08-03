@@ -21,7 +21,6 @@ void dos::mdos(QWidget *parent)
 {
   //-------------- AGREGO PERSONAJES  ----------------------------
   player1 = new Spartan(); //genera el personaje de la clase Spartan
-  player1->spartan1();
   scene->addItem(player1); //lo agrego a la escena
 
   player2 = new Spartan();
@@ -53,68 +52,68 @@ void dos::mdos(QWidget *parent)
 
 
   //-------------- AGREGO EL SUELO AL NIVEL ----------------------
-  wall1 = new floor();
-  wall1->muro2(0,900);
+  wall1 = new floor(0,900);
+  wall1->muro2();
   scene->addItem(wall1);
 
-  wall2 = new floor();
-  wall2->muro2(400,900);
+  wall2 = new floor(400,900);
+  wall2->muro2();
   scene->addItem(wall2);
 
-  wall3 = new floor();
-  wall3->muro2(800,900);
+  wall3 = new floor(800,900);
+  wall3->muro2();
   scene->addItem(wall3);
 
-  wall4 = new floor();
-  wall4->muro2(1200,900);
+  wall4 = new floor(1200,900);
+  wall4->muro2();
   scene->addItem(wall4);
 
-  wall5 = new floor();
-  wall5->muro2(1600,900);
+  wall5 = new floor(1600,900);
+  wall5->muro2();
   scene->addItem(wall5);
 
-  wall6 = new floor();
-  wall6->muro2(2000,900);
+  wall6 = new floor(2000,900);
+  wall6->muro2();
   scene->addItem(wall6);
 
-  wall7 = new floor();
-  wall7->muro2(2400,900);
+  wall7 = new floor(2400,900);
+  wall7->muro2();
   scene->addItem(wall7);
 
-  wall8 = new floor();
-  wall8->muro2(2800,900);
+  wall8 = new floor(2800,900);
+  wall8->muro2();
   scene->addItem(wall8);
 
-  wall9 = new floor();
-  wall9->muro2(3200,900);
+  wall9 = new floor(3200,900);
+  wall9->muro2();
   scene->addItem(wall9);
 
-  wall10 = new floor();
-  wall10->muro2(3600,900);
+  wall10 = new floor(3600,900);
+  wall10->muro2();
   scene->addItem(wall10);
 
-  wall11 = new floor();
-  wall11->muro2(4000,900);
+  wall11 = new floor(4000,900);
+  wall11->muro2();
   scene->addItem(wall11);
 
-  wall12 = new floor();
-  wall12->muro2(4400,900);
+  wall12 = new floor(4400,900);
+  wall12->muro2();
   scene->addItem(wall12);
 
-  wall13 = new floor();
-  wall13->muro2(4800,900);
+  wall13 = new floor(4800,900);
+  wall13->muro2();
   scene->addItem(wall13);
 
-  wall14 = new floor();
-  wall14->muro2(5200,900);
+  wall14 = new floor(5200,900);
+  wall14->muro2();
   scene->addItem(wall14);
 
-  wall15 = new floor();
-  wall15->muro2(5600,900);
+  wall15 = new floor(5600,900);
+  wall15->muro2();
   scene->addItem(wall15);
 
-  wall15 = new floor();
-  wall15->muro2(5800,900);
+  wall15 = new floor(5800,900);
+  wall15->muro2();
   scene->addItem(wall15);
 }
 
@@ -124,7 +123,6 @@ void dos::sdos(QWidget *parent)
 {
   //-------------- AGREGO PERSONAJES  ----------------------------
   player1 = new Spartan(); //genera el personaje de la clase Spartan
-  player1->spartan1();
   scene->addItem(player1); //lo agrego a la escena
 
 
@@ -147,68 +145,68 @@ void dos::sdos(QWidget *parent)
 
 
   //-------------- AGREGO EL SUELO AL NIVEL -----------------------
-  wall1 = new floor();
-  wall1->muro2(0,900);
+  wall1 = new floor(0,900);
+  wall1->muro2();
   scene->addItem(wall1);
 
-  wall2 = new floor();
-  wall2->muro2(400,900);
+  wall2 = new floor(400,900);
+  wall2->muro2();
   scene->addItem(wall2);
 
-  wall3 = new floor();
-  wall3->muro2(800,900);
+  wall3 = new floor(800,900);
+  wall3->muro2();
   scene->addItem(wall3);
 
-  wall4 = new floor();
-  wall4->muro2(1200,900);
+  wall4 = new floor(1200,900);
+  wall4->muro2();
   scene->addItem(wall4);
 
-  wall5 = new floor();
-  wall5->muro2(1600,900);
+  wall5 = new floor(1600,900);
+  wall5->muro2();
   scene->addItem(wall5);
 
-  wall6 = new floor();
-  wall6->muro2(2000,900);
+  wall6 = new floor(2000,900);
+  wall6->muro2();
   scene->addItem(wall6);
 
-  wall7 = new floor();
-  wall7->muro2(2400,900);
+  wall7 = new floor(2400,900);
+  wall7->muro2();
   scene->addItem(wall7);
 
-  wall8 = new floor();
-  wall8->muro2(2800,900);
+  wall8 = new floor(2800,900);
+  wall8->muro2();
   scene->addItem(wall8);
 
-  wall9 = new floor();
-  wall9->muro2(3200,900);
+  wall9 = new floor(3200,900);
+  wall9->muro2();
   scene->addItem(wall9);
 
-  wall10 = new floor();
-  wall10->muro2(3600,900);
+  wall10 = new floor(3600,900);
+  wall10->muro2();
   scene->addItem(wall10);
 
-  wall11 = new floor();
-  wall11->muro2(4000,900);
+  wall11 = new floor(4000,900);
+  wall11->muro2();
   scene->addItem(wall11);
 
-  wall12 = new floor();
-  wall12->muro2(4400,900);
+  wall12 = new floor(4400,900);
+  wall12->muro2();
   scene->addItem(wall12);
 
-  wall13 = new floor();
-  wall13->muro2(4800,900);
+  wall13 = new floor(4800,900);
+  wall13->muro2();
   scene->addItem(wall13);
 
-  wall14 = new floor();
-  wall14->muro2(5200,900);
+  wall14 = new floor(5200,900);
+  wall14->muro2();
   scene->addItem(wall14);
 
-  wall15 = new floor();
-  wall15->muro2(5600,900);
+  wall15 = new floor(5600,900);
+  wall15->muro2();
   scene->addItem(wall15);
 
-  wall15 = new floor();
-  wall15->muro2(5800,900);
+  wall15 = new floor(5800,900);
+  wall15->muro2();
   scene->addItem(wall15);
 }
 
