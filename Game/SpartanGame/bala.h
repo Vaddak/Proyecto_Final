@@ -17,11 +17,18 @@
 #include <QGraphicsPixmapItem>
 #include <QObject>
 
-class bala: public QObject, public QGraphicsPixmapItem
+class bala: public QObject, public QGraphicsItem
 {
   Q_OBJECT
 public:
-  bala(QGraphicsItem *parent=0);
+  bala();
+  QPixmap *pixmap;
+  float filas=0,columnas=0;
+  float ancho;
+  QTimer *timer;
+  float alto;
+  QRectF boundingRect() const;
+  void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr);
 
 public slots:
   void move();

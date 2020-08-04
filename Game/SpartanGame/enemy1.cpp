@@ -2,7 +2,7 @@
 
 
 //------------------------------------------------ BUILD THE ENEMY -----------------------------------------------------------
-enemy1::enemy1(int x_, int y_, QGraphicsItem *parent): QObject(), QGraphicsPixmapItem()
+enemy1::enemy1(int x_, int y_): QObject(), QGraphicsItem()
 {
    setPos(x_, y_);
    pixmap = new QPixmap(":/Imagenes/grunt1.png"); //izq

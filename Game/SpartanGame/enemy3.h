@@ -17,7 +17,7 @@
 #include <QGraphicsPixmapItem>
 #include <QObject>
 
-class enemy3: public QObject, public QGraphicsPixmapItem
+class enemy3: public QObject, public QGraphicsItem
 {
   Q_OBJECT
 
@@ -32,7 +32,7 @@ public:
   float alto;
   QRectF boundingRect() const;
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-  enemy3(int x_, int y_, QGraphicsItem *parent=0);
+  enemy3(int x_, int y_);
 
 
 

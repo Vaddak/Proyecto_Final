@@ -1,25 +1,25 @@
 #include "bala.h"
-#include "enemy1.h"
-#include "uno.h"
-#include "tres.h"
 #include "score.h"
 #include "bullet.h"
 #include <QTimer>
 #include <QGraphicsScene>
 #include <QtDebug>
 #include <QGraphicsItem>
+#include "uno.h"
+#include "enemy1.h"
 
-extern uno *game;
+extern uno *one;
 
-bala::bala(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem()
+bala::bala(): QObject(), QGraphicsItem()
 {
     //draw the bullet
-    setPixmap(QPixmap(":/Imagenes/fireball.png"));
-
+   pixmap = new QPixmap(":/Imagenes/fireball.png");
+   filas=0,columnas=0;
+   ancho=55;
+   alto=32;
     //connect
-    QTimer *timer =  new QTimer();
+    timer =  new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
-
     timer->start(50);
 
 }
@@ -30,9 +30,7 @@ void bala::move(){
   for(int i=0,n=colliding_items.size();i<n;i++){
       if(typeid (*(colliding_items[i]))==typeid (enemy1)){
 
-          //
-          game->score->increase();
-          //remove the both
+          one->score->increase();
           scene()->removeItem(colliding_items[i]);
           scene()->removeItem(this);
           //delete both
@@ -40,11 +38,20 @@ void bala::move(){
           delete this;
       }
   }
-    //move bullet
     setPos(x()+17,y());
-    if (pos().y()+pixmap().height() <0){
-        scene()->removeItem(this);
-        delete this;
 
-    }
+
+
+}
+
+
+QRectF bala::boundingRect() const
+{
+    return QRectF(-ancho/2,-alto/2,ancho,alto);
+}
+
+
+void bala::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+{
+  painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,0,ancho,alto);
 }

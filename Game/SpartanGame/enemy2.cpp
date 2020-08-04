@@ -1,7 +1,7 @@
 #include "enemy2.h"
 
 //------------------------------------------------ BUILD THE ENEMY -----------------------------------------------------------
-enemy2::enemy2(int x_, int y_, QGraphicsItem *parent): QObject(), QGraphicsPixmapItem()
+enemy2::enemy2(int x_, int y_): QObject(), QGraphicsItem()
 {
    setPos(x_, y_);
    pixmap = new QPixmap(":/Imagenes/elite1.png"); //izq

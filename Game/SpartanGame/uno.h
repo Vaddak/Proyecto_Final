@@ -21,11 +21,14 @@ public:
   Score *score;
   enemy1 *grunt1, *grunt2, *grunt3, *grunt4;
   QList<enemy1 *> grunts;
-   QList<Spartan *>spartans;
+  QTimer *tim;
+  QList<Spartan *>spartans;
+  bala *bullet = new bala();
   Ui::uno *ui;
   QGraphicsScene *scene;
   Spartan *player1, *player2;
   floor *wall1, *wall2, *wall3, *wall4, *wall5;
+
 
 };
 

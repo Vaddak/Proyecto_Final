@@ -15,48 +15,31 @@ tres::tres(QWidget *parent) :
   score = new Score();
   scene->addItem(score);
 
-/*
-  time = new QTimer();
-  connect(time,SIGNAL(timeout()),this,SLOT(vista()));
-  time->start(10);
-  */
-
-}
-
-
-//------------------------------------------------------ MODO SOLITARIO --------------------------------------------------------------
-void tres::stres(QWidget *parent)
-{
-
-  //-------------- AGREGO PERSONAJES  ----------------------------
-
-  player1 = new Spartan(); //genera el personaje de la clase Spartan
-  scene->addItem(player1); //lo agrego a la escena
-  spartans.push_back(player1);
-  scene->addItem(spartans.back());
-  ui->graphicsView->centerOn(spartans.at(0));
-
-
-
   //----------------------- AGREGO ENEMIGOS ------------------------
-
-  grunt2 = new enemy1(4400,680);
-  scene->addItem(grunt2);
-
-  elite1 = new enemy2(1100,675);
+  elite1 = new enemy3(1100,675);
   scene->addItem(elite1);
 
-  elite2 = new enemy2(1685,675);
+  elite2 = new enemy3(900,675);
   scene->addItem(elite2);
 
-  elite3 = new enemy3(2000,675);
+  elite3 = new enemy3(750,675);
   scene->addItem(elite3);
 
-  elite5 = new enemy3(2900,675);
+  elite4 = new enemy3(1300,675);
+  scene->addItem(elite4);
+
+  elite5 = new enemy3(1600,675);
   scene->addItem(elite5);
 
-  yanme2 = new enemy4(4800,100);
+  elite6 = new enemy3(1700,675);
+  scene->addItem(elite6);
+
+  yanme1 = new enemy4(762,120);
+  scene->addItem(yanme1);
+
+  yanme2 = new enemy4(500,100);
   scene->addItem(yanme2);
+
 
   //-------------- AGREGO EL SUELO AL NIVEL -----------------------
   wall1 = new floor(0,900);
@@ -79,49 +62,26 @@ void tres::stres(QWidget *parent)
   wall5->muro3();
   scene->addItem(wall5);
 
-  wall6 = new floor(2000,900);
-  wall6->muro3();
-  scene->addItem(wall6);
 
-  wall7 = new floor(2400,900);
-  wall7->muro3();
-  scene->addItem(wall7);
+}
 
-  wall8 = new floor(2800,900);
-  wall8->muro3();
-  scene->addItem(wall8);
 
-  wall9 = new floor(3200,900);
-  wall9->muro3();
-  scene->addItem(wall9);
+//------------------------------------------------------ MODO SOLITARIO --------------------------------------------------------------
+void tres::stres(QWidget *parent)
+{
 
-  wall10 = new floor(3600,900);
-  wall10->muro3();
-  scene->addItem(wall10);
+  //-------------- AGREGO PERSONAJES  ----------------------------
 
-  wall11 = new floor(4000,900);
-  wall11->muro3();
-  scene->addItem(wall11);
+  player1 = new Spartan(); //genera el personaje de la clase Spartan
+  scene->addItem(player1); //lo agrego a la escena
+  spartans.push_back(player1);
+  scene->addItem(spartans.back());
+  ui->graphicsView->centerOn(spartans.at(0));
 
-  wall12 = new floor(4400,900);
-  wall12->muro3();
-  scene->addItem(wall12);
 
-  wall13 = new floor(4800,900);
-  wall13->muro3();
-  scene->addItem(wall13);
 
-  wall14 = new floor(5200,900);
-  wall14->muro3();
-  scene->addItem(wall14);
 
-  wall15 = new floor(5600,900);
-  wall15->muro3();
-  scene->addItem(wall15);
 
-  wall15 = new floor(5800,900);
-  wall15->muro3();
-  scene->addItem(wall15);
 }
 
 
@@ -142,100 +102,9 @@ void tres::mtres(QWidget *parent)
   scene->addItem(spartans.back());
 
 
-  //-------------------------- AGREGO ENEMIGOS ----------------------------------
-  grunt1 = new enemy1(2400,680);
-  scene->addItem(grunt1);
-
-  grunt2 = new enemy1(4400,680);
-  scene->addItem(grunt2);
-
-  elite1 = new enemy2(1100,675);
-  scene->addItem(elite1);
-
-  elite2 = new enemy2(1685,675);
-  scene->addItem(elite2);
-
-  elite3 = new enemy3(2000,675);
-  scene->addItem(elite3);
-
-  elite4 = new enemy3(2500,675);
-  scene->addItem(elite4);
-
-  elite5 = new enemy3(2900,675);
-  scene->addItem(elite5);
-
-  yanme1 = new enemy4(762,120);
-  scene->addItem(yanme1);
-
-  yanme2 = new enemy4(4800,100);
-  scene->addItem(yanme2);
-
-
-  //--------------------- AGREGO EL SUELO DEL NIVEL  -----------------------------
-  wall1 = new floor(0,900);
-  wall1->muro3();
-  scene->addItem(wall1);
-
-  wall2 = new floor(400,900);
-  wall2->muro3();
-  scene->addItem(wall2);
-
-  wall3 = new floor(800,900);
-  wall3->muro3();
-  scene->addItem(wall3);
-
-  wall4 = new floor(1200,900);
-  wall4->muro3();
-  scene->addItem(wall4);
-
-  wall5 = new floor(1600,900);
-  wall5->muro3();
-  scene->addItem(wall5);
-
-  wall6 = new floor(2000,900);
-  wall6->muro3();
-  scene->addItem(wall6);
-
-  wall7 = new floor(2400,900);
-  wall7->muro3();
-  scene->addItem(wall7);
-
-  wall8 = new floor(2800,900);
-  wall8->muro3();
-  scene->addItem(wall8);
-
-  wall9 = new floor(3200,900);
-  wall9->muro3();
-  scene->addItem(wall9);
-
-  wall10 = new floor(3600,900);
-  wall10->muro3();
-  scene->addItem(wall10);
-
-  wall11 = new floor(4000,900);
-  wall11->muro3();
-  scene->addItem(wall11);
-
-  wall12 = new floor(4400,900);
-  wall12->muro3();
-  scene->addItem(wall12);
-
-  wall13 = new floor(4800,900);
-  wall13->muro3();
-  scene->addItem(wall13);
-
-  wall14 = new floor(5200,900);
-  wall14->muro3();
-  scene->addItem(wall14);
-
-  wall15 = new floor(5600,900);
-  wall15->muro3();
-  scene->addItem(wall15);
-
-  wall15 = new floor(5800,900);
-  wall15->muro3();
-  scene->addItem(wall15);
 }
+
+
 
 void tres::keyPressEvent(QKeyEvent *event)
 {
@@ -291,8 +160,3 @@ tres::~tres()
   delete ui;
 }
 
-void tres::vista()
-{
-  ui->graphicsView->centerOn(spartans.at(0));
-
-}
