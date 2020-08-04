@@ -42,12 +42,12 @@ void enemy2::eliteact()
 void enemy2::move()
 {
   int n = x();
-  if(n>5800){
+  if(n>1750){
       pixmap = new QPixmap(":/Imagenes/elite1.png");
       pixmap->scaled(100,100);
       m = true;
     }
-  else if(n<1100){
+  else if(n<500){
       pixmap = new QPixmap(":/Imagenes/elite1right.png");
       pixmap->scaled(100,100);
       m = false;

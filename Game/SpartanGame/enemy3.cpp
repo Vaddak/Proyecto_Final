@@ -42,11 +42,11 @@ void enemy3::eliteact()
 void enemy3::move()
 {
   int n = x();
-  if(n>2000){
+  if(n>1750){
       pixmap = new QPixmap(":/Imagenes/elite2.png");
       m = true;
     }
-  else if(n<800){
+  else if(n<550){
       pixmap = new QPixmap(":/Imagenes/elite2right.png");
       m = false;
     }

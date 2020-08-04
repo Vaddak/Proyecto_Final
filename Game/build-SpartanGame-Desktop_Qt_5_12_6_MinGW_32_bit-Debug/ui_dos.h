@@ -25,11 +25,11 @@ public:
     {
         if (dos->objectName().isEmpty())
             dos->setObjectName(QString::fromUtf8("dos"));
-        dos->resize(6000, 1000);
+        dos->resize(1800, 1000);
         dos->setMaximumSize(QSize(6000, 1000));
         graphicsView = new QGraphicsView(dos);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(0, 0, 6000, 1000));
+        graphicsView->setGeometry(QRect(0, 0, 1800, 1000));
         graphicsView->setMaximumSize(QSize(6000, 1000));
         graphicsView->setStyleSheet(QString::fromUtf8("border-image: url(:/Imagenes/mapa2.jpg);"));
         graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

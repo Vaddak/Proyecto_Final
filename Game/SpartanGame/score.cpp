@@ -3,25 +3,14 @@
 
 Score::Score(QGraphicsItem *parent): QGraphicsTextItem(parent)
 {
-    //inicializar score en 0
-    score = 0;
 
     //draw the text
-    setPlainText(QString("Score: ")+QString::number(score));
+    setPlainText(QString("Mata a los enemigos y alcanza a 343 Guilty Spark al final del mapa para que te lleve al siguiente nivel"));
     setDefaultTextColor(Qt::black);
-    setFont(QFont("Halo",20));
+    setFont(QFont("Halo",17));
 }
 
-void Score::increase()
-{
-    score++;
-    setPlainText(QString("Score: ")+QString::number(score));
-}
 
-int Score::getScore()
-{
-  return score;
-}
 
 
 

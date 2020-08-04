@@ -1,9 +1,9 @@
 #include "checkpoint.h"
 
 
-checkpoint::checkpoint(int x_, int y_, QGraphicsItem *parent)
+checkpoint::checkpoint(): QObject(), QGraphicsItem()
 {
-  setPos(x_, y_);
+  setPos(1750,700);
   pixmap = new QPixmap(":/Imagenes/save.png");
   pixmap->scaled(100,100);
   ancho = 90;
@@ -24,5 +24,7 @@ void checkpoint::paint(QPainter *painter, const QStyleOptionGraphicsItem *option
 {
   painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,0,ancho,alto);
 }
+
+
 
 

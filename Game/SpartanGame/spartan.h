@@ -16,13 +16,13 @@
 #include <QPixmap>
 #include <QIcon>
 #include "bala.h"
-class Spartan:  public QObject, public QGraphicsPixmapItem
+class Spartan:  public QObject, public QGraphicsItem
 {
     Q_OBJECT
     int posx, posy;
 public:
 
-    Spartan(QGraphicsItem *parent = 0);
+    Spartan();
     void spartan2();
     QTimer *timer;
     QPixmap *pixmap;

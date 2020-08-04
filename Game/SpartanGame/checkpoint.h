@@ -17,7 +17,7 @@
 #include <QGraphicsPixmapItem>
 #include <QObject>
 
-class checkpoint: public QObject, public QGraphicsPixmapItem
+class checkpoint: public QObject, public QGraphicsItem
 {
   Q_OBJECT
 
@@ -29,12 +29,7 @@ public:
   float alto;
   QRectF boundingRect() const;
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-  checkpoint(int x_, int y_, QGraphicsItem *parent=0);
-
-
-
-
-private:
+  checkpoint();
   QPixmap *pixmap;
 
 

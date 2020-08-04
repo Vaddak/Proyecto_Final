@@ -4,6 +4,8 @@
 #include <QDialog>
 #include "bala.h"
 #include "score.h"
+#include "checkpoint.h"
+
 namespace Ui {
   class uno;
 }
@@ -24,6 +26,7 @@ public:
   QTimer *tim;
   QList<Spartan *>spartans;
   bala *bullet = new bala();
+  checkpoint *guilty;
   Ui::uno *ui;
   QGraphicsScene *scene;
   Spartan *player1, *player2;

@@ -25,11 +25,11 @@ enemy4::enemy4(int x_, int y_, QGraphicsItem *parent): QObject(), QGraphicsPixma
 void enemy4::move()
 {
   int n = x();
-  if(n>2000){
+  if(n>1700){
       pixmap = new QPixmap(":/Imagenes/yanme.png");
       m = true;
     }
-  else if(n<800){
+  else if(n<200){
       pixmap = new QPixmap(":/Imagenes/yanme.png");
       m = false;
     }

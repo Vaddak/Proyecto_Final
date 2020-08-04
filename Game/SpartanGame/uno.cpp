@@ -2,6 +2,9 @@
 #include "ui_uno.h"
 #include "spartan.h"
 #include <QDebug>
+#include "dos.h"
+#include "ui_dos.h"
+
 uno::uno(QWidget *parent) :
   QDialog(parent),
   ui(new Ui::uno)
@@ -17,6 +20,10 @@ uno::uno(QWidget *parent) :
 
 
 
+
+  //----------------------------- PUNTO DE CONTROL -----------------------------
+  guilty = new checkpoint();
+  scene->addItem(guilty);
 
 
   //--------------------- AGREGO EL SUELO DEL NIVEL  -----------------------------
@@ -57,11 +64,8 @@ uno::uno(QWidget *parent) :
   grunt4 = new enemy1(900,680);
   grunts.push_back(grunt4);
   scene->addItem(grunts.back());
-
-
-
-
 }
+
 
 
 //------------------------------------------------------ MODO SOLITARIO --------------------------------------------------------------
@@ -74,17 +78,14 @@ void uno::suno(QWidget *parent)
   scene->addItem(player1); //lo agrego a la escena
   spartans.push_back(player1);
   scene->addItem(spartans.back());
-
-
 }
+
+
 
 
 //----------------------------------------------------- MODO MULTIJUGADOR ------------------------------------------------------------------------
 void uno::muno(QWidget *parent)
 {
-
-
-
   //------------------ AGREGO PERSONAJES  ----------------------------
   player1 = new Spartan(); //genera el personaje de la clase Spartan
   scene->addItem(player1); //lo agrego a la escena
@@ -96,13 +97,12 @@ void uno::muno(QWidget *parent)
   scene->addItem(player2);
   spartans.push_back(player2);
   scene->addItem(spartans.back());
-
-
 }
 
-
+//--------------------------------------------------MOVIMIENTO Y DISPARO DE JUGADORES-----------------------------------------------------------
 void uno::keyPressEvent(QKeyEvent *event)
-{
+{ 
+  //-----------------------SOLITARIO----------------------------
   if(spartans.size()>0 && spartans.size()<2){
       if(event->key()==Qt::Key_W){
          //salto
@@ -110,16 +110,25 @@ void uno::keyPressEvent(QKeyEvent *event)
 
       if(event->key()==Qt::Key_D){
          spartans.at(0)->right();
+
+
+         if(spartans.at(0)->collidesWithItem(guilty)){
+             dos dos;
+             dos.sdos();
+             dos.setModal(true);
+             dos.exec();
+             ui->graphicsView->close();
+
+           }
          }
 
       if(event->key()==Qt::Key_F){
           bala *bullet = new bala();
           scene->addItem(bullet);
-          bullet->setPos(spartans.at(0)->x(),spartans.at(0)->y());
-
-
+          bullet->setPos(spartans.at(0)->x(),spartans.at(0)->y()); 
        }
     }
+
 
 
  //-----------------------MULTIPLAYER----------------------------
@@ -129,32 +138,57 @@ else if(spartans.size()==2){
           //salto
         }
 
+
       if(event->key()==Qt::Key_D){
          spartans.at(0)->right();
+         if(spartans.at(0)->collidesWithItem(guilty)){
+             dos dos;
+             dos.mdos();
+             dos.setModal(true);
+             dos.exec();
+             ui->graphicsView->close();
+
+
+           }
         }
+
 
       if(event->key()==Qt::Key_F){ //disparo
          bala *bullet = new bala();
          scene->addItem(bullet);
-         bullet->setPos(spartans.at(0)->x(),spartans.at(0)->y());
+         bullet->setPos(spartans.at(0)->x(),spartans.at(0)->y());       
         }
+
 
       if(event->key()==Qt::Key_I){
           //salto
         }
 
+
       if(event->key()==Qt::Key_P){
           bala *bullet = new bala();
           scene->addItem(bullet);
-          bullet->setPos(spartans.at(1)->x(),spartans.at(1)->y());
-
+          bullet->setPos(spartans.at(1)->x(),spartans.at(1)->y());       
         }
+
 
       if(event->key()==Qt::Key_L){
           spartans.at(1)->right();
+          if(spartans.at(1)->collidesWithItem(guilty)){
+              dos dos;
+              dos.mdos();
+              dos.setModal(true);
+              dos.exec();
+              ui->graphicsView->close();
+
+
+            }
         }
 
     }
+
+
+
 }
 
 

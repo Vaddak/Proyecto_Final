@@ -1,6 +1,6 @@
 #include "spartan.h"
 
-Spartan::Spartan(QGraphicsItem *parent)
+Spartan::Spartan(): QObject(), QGraphicsItem()
 {
   setPos(100,678); //donde aparece el personaje
   timer = new QTimer();

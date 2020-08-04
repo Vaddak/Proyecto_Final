@@ -16,6 +16,7 @@
 #include <QIcon>
 #include <QGraphicsPixmapItem>
 #include <QObject>
+#include "score.h"
 
 class bala: public QObject, public QGraphicsItem
 {
@@ -29,9 +30,18 @@ public:
   float alto;
   QRectF boundingRect() const;
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr);
+  int contador=0;
+  bool m=false;
+
+
+
+
 
 public slots:
   void move();
+
+
+
 };
 
 
