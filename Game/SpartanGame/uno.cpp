@@ -109,7 +109,7 @@ void uno::keyPressEvent(QKeyEvent *event)
   //-----------------------SOLITARIO----------------------------
   if(spartans.size()>0 && spartans.size()<2){
       if(event->key()==Qt::Key_W){
-         //salto
+         spartans.at(0)->up();
         }
 
       if(event->key()==Qt::Key_D){
@@ -140,7 +140,7 @@ void uno::keyPressEvent(QKeyEvent *event)
 else if(spartans.size()==2){
       Spartan * a = spartans.at(1); //creo una variable para reemplazar
       if(event->key()==Qt::Key_W){
-          //salto
+          spartans.at(0)->up();
         }
 
 
@@ -166,7 +166,7 @@ else if(spartans.size()==2){
 
 
       if(event->key()==Qt::Key_I){
-          //salto
+          spartans.at(0)->up();
         }
 
 
@@ -189,7 +189,6 @@ else if(spartans.size()==2){
               this->close();
             }
         }
-
     }
 
 

@@ -27,7 +27,9 @@ public:
     QTimer *timer;
     QPixmap *pixmap;
     float filas,columnas;
+    bool m = true;
     float ancho;
+    int e =10;
     float alto;
     int getPosx();
     void setPosx(int px);

@@ -70,7 +70,26 @@ void Spartan::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, Q
 
 void Spartan::up() //salto del spartan
 {
-  //salto
+  //m=true
+  int n = y();
+  int o = y();
+
+  if(n>400){
+      m = true;
+    }
+  else if(n<=800){
+      m = false;
+    }
+
+  if(m==true){
+      n = n - e;
+      setPos(x(),n);
+    }
+  else if(m==false){
+      n = n + e;
+      setPos(x(),n);
+    }
+
 }
 
 
