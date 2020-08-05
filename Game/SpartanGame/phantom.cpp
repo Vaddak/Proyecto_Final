@@ -2,38 +2,12 @@
 
 
 //------------------------------------------------ BUILD THE ENEMY -----------------------------------------------------------
-void phantom::phantom1(QGraphicsItem *parent)
+phantom::phantom(): QObject(), QGraphicsItem()
 {
-   setPos(1000, 200);
-   pixmap = new QPixmap(":/Imagenes/phantom1.png");
-   pixmap->scaled(100,100);
-   ancho = 300;
-   alto  = 200;
-   filas = 0;
-   columnas = 0;
-
-
-   // --------- MOVIMIENTO DE ARRIBA A ABAJO  -----------
-   timer1 = new QTimer();
-   connect(timer1,SIGNAL(timeout()),this,SLOT(movey()));
-   timer1->start(100);
-
-  // --------- MOVIMIENTO DE IZQUIERDA A DERECHA --------
-   timer = new QTimer();
-   connect(timer,SIGNAL(timeout()),this, SLOT(movex()));
-   timer->start(100);
-}
-
-void phantom::phantom2(QGraphicsItem *parent)
-{
-  setPos(1300, 500);
-  pixmap = new QPixmap(":/Imagenes/phantom2.png");
-  pixmap->scaled(100,100);
   ancho = 300;
   alto  = 200;
   filas = 0;
   columnas = 0;
-
 
   // --------- MOVIMIENTO DE ARRIBA A ABAJO  -----------
   timer1 = new QTimer();
@@ -44,6 +18,21 @@ void phantom::phantom2(QGraphicsItem *parent)
   timer = new QTimer();
   connect(timer,SIGNAL(timeout()),this, SLOT(movex()));
   timer->start(100);
+
+
+}
+void phantom::phantom1()
+{
+   setPos(1000, 200);
+   pixmap = new QPixmap(":/Imagenes/phantom1.png");
+   pixmap->scaled(100,100);
+}
+
+void phantom::phantom2()
+{
+  setPos(1300, 500);
+  pixmap = new QPixmap(":/Imagenes/phantom2.png");
+  pixmap->scaled(100,100);
 }
 
 
@@ -92,6 +81,7 @@ void phantom::movex()
 
 
 //----------------------------------------------------------- DRAW THE ENEMY -----------------------------------------------------
+
 QRectF phantom::boundingRect() const
 {
     return QRectF(-ancho/2,-alto/2,ancho,alto);

@@ -12,7 +12,11 @@ dos::dos(QWidget *parent) :
   scene->setBackgroundBrush(QBrush(QImage(":/Imagenes/mapa2.jpg")));
   ui->graphicsView->setScene(scene);
   score = new Score();
+  score->normal();
   scene->addItem(score);
+  sound->setMedia(QUrl("qrc:/Music/song2.mp3"));
+  sound->play();
+
 
 
 
@@ -120,6 +124,8 @@ void dos::keyPressEvent(QKeyEvent *event)
       if(event->key()==Qt::Key_D){
          spartans.at(0)->right();
          if(spartans.at(0)->collidesWithItem(guilty)){
+             sound->stop();
+             this->close();
              tres tres;
              tres.stres();
              tres.setModal(true);
@@ -148,8 +154,10 @@ else if(spartans.size()==2){
       if(event->key()==Qt::Key_D){
          spartans.at(0)->right();
          if(spartans.at(0)->collidesWithItem(guilty)){
+             sound->stop();
+             this->close();
              tres tres;
-             tres.stres();
+             tres.mtres();
              tres.setModal(true);
              tres.exec();
            }
@@ -178,10 +186,13 @@ else if(spartans.size()==2){
       if(event->key()==Qt::Key_L){
           spartans.at(1)->right();
           if(spartans.at(1)->collidesWithItem(guilty)){
+              sound->stop();
+              this->close();
               tres tres;
-              tres.stres();
+              tres.mtres();
               tres.setModal(true);
               tres.exec();
+
             }
         }
 

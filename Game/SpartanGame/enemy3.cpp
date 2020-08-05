@@ -15,7 +15,7 @@ enemy3::enemy3(int x_, int y_): QObject(), QGraphicsItem()
    // -------------------- SPRITE -----------------------
    timer1 = new QTimer();
    QTimer *tim = new QTimer();
-   tim->start(100);
+   tim->start(123);
    connect(tim,SIGNAL(timeout()),this,SLOT(eliteact()));
 
 

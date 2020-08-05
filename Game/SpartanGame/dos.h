@@ -5,6 +5,8 @@
 #include "score.h"
 #include "checkpoint.h"
 #include "bala.h"
+#include "music.h"
+
 namespace Ui {
   class dos;
 }
@@ -30,6 +32,7 @@ public:
   QTimer *tim;
   enemy2 *elite1, *elite2, *elite3, *elite4, *elite5;
   floor *wall1, *wall2, *wall3, *wall4, *wall5;
+  QMediaPlayer *sound = new QMediaPlayer();
 
 };
 

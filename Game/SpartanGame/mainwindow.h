@@ -62,6 +62,7 @@ private: //Creo los objetos
   Ui::MainWindow *ui;
   //QGraphicsScene *scene = new QGraphicsScene(this); //creo la escena
   QGraphicsScene *scene;
+  QMediaPlayer *sound = new QMediaPlayer();
 
 
 

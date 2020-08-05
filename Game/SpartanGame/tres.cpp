@@ -2,6 +2,8 @@
 #include "ui_tres.h"
 #include "spartan.h"
 #include "QDebug"
+#include "cuatro.h"
+#include "ui_cuatro.h"
 
 tres::tres(QWidget *parent) :
   QDialog(parent),
@@ -13,7 +15,15 @@ tres::tres(QWidget *parent) :
   scene->setBackgroundBrush(QBrush(QImage(":/Imagenes/mapa3.jpg")));
   ui->graphicsView->setScene(scene);
   score = new Score();
+  score->normal();
   scene->addItem(score);
+  sound->setMedia(QUrl("qrc:/Music/song3.mp3"));
+  sound->play();
+
+  //----------------------------- PUNTO DE CONTROL -----------------------------
+  guilty = new checkpoint();
+  scene->addItem(guilty);
+
 
   //----------------------- AGREGO ENEMIGOS ------------------------
   elite1 = new enemy3(1100,675);
@@ -76,13 +86,9 @@ void tres::stres(QWidget *parent)
   scene->addItem(player1); //lo agrego a la escena
   spartans.push_back(player1);
   scene->addItem(spartans.back());
-  ui->graphicsView->centerOn(spartans.at(0));
-
-
-
-
-
 }
+
+
 
 
 //----------------------------------------------------- MODO MULTIJUGADOR ------------------------------------------------------------------------
@@ -93,21 +99,19 @@ void tres::mtres(QWidget *parent)
   scene->addItem(player1); //lo agrego a la escena
   spartans.push_back(player1);
   scene->addItem(spartans.back());
-  ui->graphicsView->centerOn(spartans.at(0));
 
   player2 = new Spartan();
   player2->spartan2();
-  scene->addItem(player2);  
+  scene->addItem(player2);
   spartans.push_back(player2);
   scene->addItem(spartans.back());
-
-
 }
 
 
-
+//--------------------------------------------------MOVIMIENTO Y DISPARO DE JUGADORES-----------------------------------------------------------
 void tres::keyPressEvent(QKeyEvent *event)
 {
+  //-----------------------SOLITARIO----------------------------
   if(spartans.size()>0 && spartans.size()<2){
       if(event->key()==Qt::Key_W){
          //salto
@@ -115,45 +119,89 @@ void tres::keyPressEvent(QKeyEvent *event)
 
       if(event->key()==Qt::Key_D){
          spartans.at(0)->right();
-         ui->graphicsView->centerOn(spartans.at(0));
-        }
+
+
+         if(spartans.at(0)->collidesWithItem(guilty)){
+             sound->stop();
+             this->close();
+             cuatro cuatro;
+             cuatro.scuatro();
+             cuatro.setModal(true);
+             cuatro.exec();
+
+           }
+         }
 
       if(event->key()==Qt::Key_F){
-
-
-        }
+          bala *bullet = new bala();
+          scene->addItem(bullet);
+          bullet->setPos(spartans.at(0)->x(),spartans.at(0)->y());
+       }
     }
 
-  else if(spartans.size()==2){
+
+
+ //-----------------------MULTIPLAYER----------------------------
+else if(spartans.size()==2){
       Spartan * a = spartans.at(1); //creo una variable para reemplazar
+
       if(event->key()==Qt::Key_W){
           //salto
         }
 
+
       if(event->key()==Qt::Key_D){
          spartans.at(0)->right();
-         ui->graphicsView->centerOn(spartans.at(0));
+         if(spartans.at(0)->collidesWithItem(guilty)){
+             sound->stop();
+             this->close();
+             cuatro cuatro;
+             cuatro.mcuatro();
+             cuatro.setModal(true);
+             cuatro.exec();
 
+           }
         }
+
 
       if(event->key()==Qt::Key_F){ //disparo
-
+         bala *bullet = new bala();
+         scene->addItem(bullet);
+         bullet->setPos(spartans.at(0)->x(),spartans.at(0)->y());
         }
+
 
       if(event->key()==Qt::Key_I){
           //salto
         }
-      if(event->key()==Qt::Key_P){
 
+
+      if(event->key()==Qt::Key_P){
+          bala *bullet = new bala();
+          scene->addItem(bullet);
+          bullet->setPos(spartans.at(1)->x(),spartans.at(1)->y());
         }
+
+
       if(event->key()==Qt::Key_L){
           spartans.at(1)->right();
-          ui->graphicsView->centerOn(spartans.at(0));
+          if(spartans.at(1)->collidesWithItem(guilty)){
+              sound->stop();
+              this->close();
+              cuatro cuatro;
+              cuatro.mcuatro();
+              cuatro.setModal(true);
+              cuatro.exec();
 
-
+            }
         }
+
     }
+
+
+
 }
+
 
 tres::~tres()
 {

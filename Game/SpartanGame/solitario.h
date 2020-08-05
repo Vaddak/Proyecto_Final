@@ -22,7 +22,7 @@ private slots:
 
   void on_registro_clicked();
 
-  void on_cargar_clicked();
+
 
 
 private:

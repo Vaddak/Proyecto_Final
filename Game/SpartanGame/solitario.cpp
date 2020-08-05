@@ -41,12 +41,5 @@ void solitario::on_registro_clicked()
 
 }
 
-void solitario::on_cargar_clicked()
-{
 
-  this->close();
-  scargar scargar; //creo la clase
-  scargar.setModal(true); //activo sus funciones
-  scargar.exec(); //ejecuto la ventana
-}
 

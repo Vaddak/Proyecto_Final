@@ -5,6 +5,7 @@
 #include "bala.h"
 #include "score.h"
 #include "checkpoint.h"
+#include "music.h"
 
 namespace Ui {
   class uno;
@@ -29,6 +30,7 @@ public:
   checkpoint *guilty;
   Ui::uno *ui;
   QGraphicsScene *scene;
+  QMediaPlayer *sound = new QMediaPlayer();
   Spartan *player1, *player2;
   floor *wall1, *wall2, *wall3, *wall4, *wall5;
 

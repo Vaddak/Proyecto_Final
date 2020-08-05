@@ -25,10 +25,10 @@ public:
     {
         if (tres->objectName().isEmpty())
             tres->setObjectName(QString::fromUtf8("tres"));
-        tres->resize(6000, 1000);
+        tres->resize(1800, 1000);
         graphicsView = new QGraphicsView(tres);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(0, 0, 6000, 1000));
+        graphicsView->setGeometry(QRect(0, 0, 1800, 1000));
         graphicsView->setStyleSheet(QString::fromUtf8("border-image: url(:/Imagenes/mapa3.jpg);"));
         graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

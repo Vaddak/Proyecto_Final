@@ -1,6 +1,6 @@
 #include "floor.h"
 
-floor::floor(int x_, int y_, QGraphicsItem *parent)
+floor::floor(int x_, int y_): QObject(), QGraphicsItem()
 {
   filas = 0;
   columnas = 0;

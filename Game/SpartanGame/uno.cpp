@@ -15,7 +15,11 @@ uno::uno(QWidget *parent) :
   //scene->setBackgroundBrush(QBrush(QImage(":/Imagenes/mapa1.jpg")));
   ui->graphicsView->setScene(scene);
   score = new Score();
+  score->normal();
   scene->addItem(score);
+  sound->setMedia(QUrl("qrc:/Music/song1.mp3"));
+  sound->play();
+
 
 
 
@@ -113,11 +117,12 @@ void uno::keyPressEvent(QKeyEvent *event)
 
 
          if(spartans.at(0)->collidesWithItem(guilty)){
+             sound->stop();
+             this->close();
              dos dos;
              dos.sdos();
              dos.setModal(true);
              dos.exec();
-             ui->graphicsView->close();
 
            }
          }
@@ -142,13 +147,13 @@ else if(spartans.size()==2){
       if(event->key()==Qt::Key_D){
          spartans.at(0)->right();
          if(spartans.at(0)->collidesWithItem(guilty)){
+             sound->stop();
+             this->close();
              dos dos;
              dos.mdos();
              dos.setModal(true);
              dos.exec();
-             ui->graphicsView->close();
-
-
+             this->close();
            }
         }
 
@@ -175,13 +180,13 @@ else if(spartans.size()==2){
       if(event->key()==Qt::Key_L){
           spartans.at(1)->right();
           if(spartans.at(1)->collidesWithItem(guilty)){
+              sound->stop();
+              this->close();
               dos dos;
               dos.mdos();
               dos.setModal(true);
               dos.exec();
-              ui->graphicsView->close();
-
-
+              this->close();
             }
         }
 

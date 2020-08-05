@@ -16,7 +16,7 @@
 #include <QIcon>
 #include <QGraphicsPixmapItem>
 
-class Pelican: public QObject, public QGraphicsPixmapItem
+class Pelican: public QObject, public QGraphicsItem
 {
   Q_OBJECT
 
@@ -28,7 +28,7 @@ public:
   float alto;
   QRectF boundingRect() const;
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-  Pelican(int x_, int y_, QGraphicsItem *parent=0);
+  Pelican(int x_, int y_);
   void paint2();
   void up();
   void down();

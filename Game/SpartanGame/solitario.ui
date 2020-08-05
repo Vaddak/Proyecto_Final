@@ -26,22 +26,6 @@
     <string notr="true">border-image: url(:/Imagenes/main.jpg);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="cargar">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>550</y>
-     <width>419</width>
-     <height>100</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/Imagenes/cargar.jpg);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QPushButton" name="registro">
    <property name="geometry">
     <rect>

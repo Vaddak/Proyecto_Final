@@ -35,7 +35,6 @@ SOURCES += \
     music.cpp \
     pelican.cpp \
     phantom.cpp \
-    scargar.cpp \
     score.cpp \
     solitario.cpp \
     spartan.cpp \
@@ -62,7 +61,6 @@ HEADERS += \
     music.h \
     pelican.h \
     phantom.h \
-    scargar.h \
     score.h \
     solitario.h \
     spartan.h \
@@ -79,7 +77,6 @@ FORMS += \
     mainwindow.ui \
     mregistro.ui \
     multiplayer.ui \
-    scargar.ui \
     solitario.ui \
     sregistro.ui \
     tres.ui \

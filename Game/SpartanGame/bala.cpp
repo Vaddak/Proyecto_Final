@@ -12,7 +12,7 @@
 #include "enemy3.h"
 #include <QMessageBox>
 #include <QFont>
-
+#include "phantom.h"
 
 extern uno *one;
 
@@ -36,7 +36,8 @@ bala::bala(): QObject(), QGraphicsItem()
 
 //--------------------------- MOVIMIENTO Y ELIMINACION DE ENEMIGOS --------------------------------
 void bala::move(){
-  setPos(x()+17,y());
+
+  setPos(x()+20,y()); //desplazamiento de la bala
 
   QList<QGraphicsItem *> level1 = collidingItems();
   for(int i=0,n=level1.size();i<n;i++){
@@ -65,6 +66,31 @@ void bala::move(){
       }
   } //LEVEL 2-----------------------------------------
 
+  QList<QGraphicsItem *> level3 = collidingItems();
+  for(int i=0,n=level3.size();i<n;i++){
+      if(typeid (*(level3[i]))==typeid (enemy3)){
+
+
+          scene()->removeItem(level3[i]);
+          scene()->removeItem(this);
+          //delete both
+          delete level3[i];
+          delete this;
+      }
+  } //LEVEL 3-----------------------------------------
+
+  QList<QGraphicsItem *> level4 = collidingItems();
+  for(int i=0,n=level4.size();i<n;i++){
+      if(typeid (*(level4[i]))==typeid (phantom)){
+
+
+          scene()->removeItem(level4[i]);
+          scene()->removeItem(this);
+          //delete both
+          delete level4[i];
+          delete this;
+      }
+  } //LEVEL 4-----------------------------------------
 
 
 }//move

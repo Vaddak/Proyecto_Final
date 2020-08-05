@@ -9,6 +9,8 @@ class Score: public QGraphicsTextItem
 {
 public:
     Score(QGraphicsItem * parent=0);
+    void normal();
+    void level4();
 
 private:
     int score;

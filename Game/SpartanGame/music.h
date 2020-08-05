@@ -10,7 +10,6 @@ public:
 
 private:
     QMediaPlayer *fondo = new QMediaPlayer();
-    QMediaPlayer *disparo = new QMediaPlayer();
     QMediaPlayer *map1 = new QMediaPlayer();
     QMediaPlayer *map2 = new QMediaPlayer();
     QMediaPlayer *map3 = new QMediaPlayer();

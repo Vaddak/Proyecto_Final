@@ -17,11 +17,12 @@
 #include <QGraphicsPixmapItem>
 #include <QObject>
 
-class phantom: public QObject, public QGraphicsPixmapItem
+class phantom: public QObject, public QGraphicsItem
 {
   Q_OBJECT
 
 public:
+  phantom();
   int posx;
   int posy;
   int segundo=0;
@@ -32,19 +33,19 @@ public:
   float alto;
   QRectF boundingRect() const;
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-  void phantom1(QGraphicsItem *parent=0);
-  void phantom2(QGraphicsItem *parent=0);
-
+  void phantom1();
+  void phantom2();
+  QPixmap *pixmap;
+  QTimer *timer1;
+  QTimer *timer;
 
 
 public slots:
   void movey();
   void movex();
 
-private:
-  QPixmap *pixmap;
-  QTimer *timer1;
-  QTimer *timer;
+
+
 
 
 };

@@ -3,7 +3,7 @@
 //---------------------  CONSTRUCTORES ----------------------------------------
 
 
-Pelican::Pelican(int x_, int y_, QGraphicsItem *parent)
+Pelican::Pelican(int x_, int y_):  QObject(), QGraphicsItem()
 {
   setPos(x_, y_);
   pixmap = new QPixmap(":/Imagenes/pelican1.png");

@@ -13,17 +13,19 @@
 #include <QKeyEvent>
 #include <QGraphicsView>
 #include <QTimer>
+#include <QObject>
 #include <QPixmap>
 #include <QIcon>
 
-class floor:  public QObject, public QGraphicsPixmapItem
+class floor:  public QObject, public QGraphicsItem
 {
 
   Q_OBJECT
+
   int posx, posy;
 
 public:
-  floor(int x_, int y_, QGraphicsItem *parent = 0);
+  floor(int x_, int y_);
   void muro1();
   void muro2();
   void muro3();

@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
   instrucciones instrucciones;
   instrucciones.setModal(true);
   instrucciones.exec();
+  sound->setMedia(QUrl("qrc:/Music/theme.mp3"));
+  sound->play();
 
 
 
@@ -34,7 +36,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_solitario_clicked() //implementacion del boton para acceder al modo de juego "solitario"
 {
-
+  sound->stop();
   this->close();
   solitario solitario; //creo la variable
   solitario.setModal(true); //booleano que pone en true toda la ventana y las funciones de la misma al hundir el boton
@@ -55,6 +57,7 @@ void MainWindow::on_salir_clicked()
 void MainWindow::on_multiplayer_clicked()
 {
 
+  sound->stop();
   this->close(); //cierro la ventana
   multiplayer multiplayer;
   multiplayer.setModal(true);
