@@ -1,0 +1,4 @@
+player1,player2
+Vaddak,Player2
+Spartan1,Spartan2
+mASTER,Cortana

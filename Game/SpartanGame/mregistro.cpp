@@ -15,7 +15,7 @@ void mregistro::mescribir(string a, string b) //funcion que guarda los nombres d
 {
 
     ofstream archivo;
-     archivo.open("../Documentos/Multiplayerregistro.txt", ios::app);
+     archivo.open("../SpartanGame/Documentos/Multiplayerregistro.txt", ios::app);
      if (archivo.fail()){
          qDebug()<< "No se pudo abrir el archivo";
          exit(1);
